@@ -24,19 +24,19 @@ icon: file-waveform
 | pagesize  | Int    | 查询条数。注意：单次查询最多不能超过10000条                                          |
 | sort      | Bool   | <p>排序方式，非必填项，不填为默认值false，返回结果按时间降序排序。<br>当值为true时，返回结果按时间升序排序</p> |
 
-* 示例：
-  
-  ```json
-  {
-    "userid": "111",
-    "gameid": "pg_98",
-    "starttime": 1730390400,
-    "endtime": 1734969599,
-    "pagesize": 20,
-    "page": 1,
-    "sort":true
-  }
-  ```
+*   示例：
+
+    ```json
+    {
+      "userid": "111",
+      "gameid": "pg_98",
+      "starttime": 1730390400,
+      "endtime": 1734969599,
+      "pagesize": 20,
+      "page": 1,
+      "sort":true
+    }
+    ```
 
 **请求示例代码**
 
@@ -49,8 +49,8 @@ curl --location --request POST 'https://{APIURL}/api/v1/record/getbetlogs' \
 --data-raw '{
     "userid": "string",
     "gameid": "string",
-    "starttime": 0,
-    "endtime": 0,
+    "starttime": 1730390400,
+    "endtime": 1734969599,
     "pagesize": 20,
     "page": 1,
     "sort": true
@@ -78,61 +78,61 @@ curl --location --request POST 'https://{APIURL}/api/v1/record/getbetlogs' \
 | completed    | boolean       | 本轮游戏是否完成         |
 | roundid      | string        | 回合ID, 同一局游戏该字段相同 |
 
-* 示例：
-  
-  ```json
-  {
-      "code": 0,
-      "error": "",
-      "data": {
-          "list": [
-              {
-                  "id": "d3dim10db2sst828u8og",
-                  "pid": 172349,
-                  "userid": "FecXhmSl-1759021920907-DemoUser",
-                  "gameid": "pp_vs9aztecgemsdx",
-                  "bet": 0.45,
-                  "win": 0,
-                  "insert_time": 1759193860599,
-                  "appid": "qwe456_USD_1",
-                  "balance": 100295.99,
-                  "winlose": -0.45,
-                  "grade": 0,
-                  "completed": true,
-                  "roundid": "d3dim10db2sst828u8og"
-              },
-              {
-                  "id": "d3dim78db2sst828u8pg",
-                  "pid": 172349,
-                  "userid": "FecXhmSl-1759021920907-DemoUser",
-                  "gameid": "pp_vs9aztecgemsdx",
-                  "bet": 9,
-                  "win": 0,
-                  "insert_time": 1759193885064,
-                  "appid": "qwe456_USD_1",
-                  "balance": 100307.99,
-                  "winlose": -9,
-                  "grade": 9,
-                  "completed": true,
-                  "roundid": "d3dim78db2sst828u8pg"
-              },
-              {
-                  "id": "d3dimjgdb2sst828u90gEnd",
-                  "pid": 172349,
-                  "userid": "FecXhmSl-1759021920907-DemoUser",
-                  "gameid": "pp_vs9aztecgemsdx",
-                  "bet": 0,
-                  "win": 28,
-                  "insert_time": 1759193934544,
-                  "appid": "qwe456_USD_1",
-                  "balance": 100233.99,
-                  "winlose": 28,
-                  "grade": 9,
-                  "completed": true,
-                  "roundID": "d3dimjgdb2sst828u90g"
-              }
-          ],
-          "all": 20
-      }
-  }
-  ```
+*   示例：
+
+    ```json
+    {
+        "code": 0,
+        "error": "",
+        "data": {
+            "list": [
+                {
+                    "id": "d3dim10db2sst828u8og",
+                    "pid": 172349,
+                    "userid": "FecXhmSl-1759021920907-DemoUser",
+                    "gameid": "pp_vs9aztecgemsdx",
+                    "bet": 0.45,
+                    "win": 0,
+                    "insert_time": 1759193860599,
+                    "appid": "qwe456_USD_1",
+                    "balance": 100295.99,
+                    "winlose": -0.45,
+                    "grade": 0,
+                    "completed": true,
+                    "roundid": "d3dim10db2sst828u8og"
+                },
+                {
+                    "id": "d3dim78db2sst828u8pg",
+                    "pid": 172349,
+                    "userid": "FecXhmSl-1759021920907-DemoUser",
+                    "gameid": "pp_vs9aztecgemsdx",
+                    "bet": 9,
+                    "win": 0,
+                    "insert_time": 1759193885064,
+                    "appid": "qwe456_USD_1",
+                    "balance": 100307.99,
+                    "winlose": -9,
+                    "grade": 9,
+                    "completed": true,
+                    "roundid": "d3dim78db2sst828u8pg"
+                },
+                {
+                    "id": "d3dimjgdb2sst828u90gEnd",
+                    "pid": 172349,
+                    "userid": "FecXhmSl-1759021920907-DemoUser",
+                    "gameid": "pp_vs9aztecgemsdx",
+                    "bet": 0,
+                    "win": 28,
+                    "insert_time": 1759193934544,
+                    "appid": "qwe456_USD_1",
+                    "balance": 100233.99,
+                    "winlose": 28,
+                    "grade": 9,
+                    "completed": true,
+                    "roundID": "d3dimjgdb2sst828u90g"
+                }
+            ],
+            "all": 20
+        }
+    }
+    ```

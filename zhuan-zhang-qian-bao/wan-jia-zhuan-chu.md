@@ -23,7 +23,7 @@ icon: coin-blank
     ```json
     {
         "userid": "string",
-        "amount": 0,
+        "amount": 10,
         "traceid": "string"
     }
     ```
@@ -38,7 +38,7 @@ curl --location --request POST 'https://{APIURL}/api/v1/player/transferOut' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "userid": "string",
-    "amount": 0,
+    "amount": 10,
     "traceid": "string"
 }'
 ```

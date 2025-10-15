@@ -18,15 +18,15 @@ icon: coin
 | amount  | float         | 转入金额 >0，最大1亿 |
 | traceid | string\[4-40] | 交易单号         |
 
-* 示例：
-  
-  ```json
-  {
-      "userid": "string",
-      "amount": 0,
-      "traceid": "string"
-  }
-  ```
+*   示例：
+
+    ```json
+    {
+        "userid": "string",
+        "amount": 10,
+        "traceid": "string"
+    }
+    ```
 
 请求示例代码：
 
@@ -38,7 +38,7 @@ curl --location --request POST 'https://{APIURL}/api/v1/player/transferIn' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "userid": "string",
-    "amount": 0,
+    "amount": 10,
     "traceid": "string"
 }'
 ```
@@ -52,30 +52,25 @@ curl --location --request POST 'https://{APIURL}/api/v1/player/transferIn' \
 | data                | object  | 返回数据          |
 | data.after\_balance | float   | 充值成功后余额       |
 
-
-
 * 正常返回
+*   示例：
 
-* 示例：
-  
-  ```json
-  {
-      "code": 0,
-      "error": "",
-      "data": {
-          "after_balance": 493.8
-      }
-  }
-  ```
-
+    ```json
+    {
+        "code": 0,
+        "error": "",
+        "data": {
+            "after_balance": 493.8
+        }
+    }
+    ```
 * 订单重复
+*   示例：
 
-* 示例：
-  
-  ```json
-  {
-  "code": 1,
-  "error": "Order already exists",
-  "data": null
-  }
-  ```
+    ```json
+    {
+    "code": 1,
+    "error": "Order already exists",
+    "data": null
+    }
+    ```

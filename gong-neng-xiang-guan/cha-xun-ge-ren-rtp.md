@@ -14,13 +14,13 @@ icon: book-quran
 
 ### 2) 请求参数
 
-| 参数名      | 类型     | 必填  | 描述                                                                                                                |
-| -------- | ------ | --- | ----------------------------------------------------------------------------------------------------------------- |
-| userid   | string | 是   | 运营商的玩家唯一标识                                                                                                        |
-| gameid   | string | 是   | <p>被控制RTP的游戏ID<br><strong>注意</strong>: 填写<code>ALL</code>时查询全部游戏</p>                                              |
-| page     | int64  | 是   | 页码，从1开始                                                                                                           |
-| pagesize | int64  | 是   | 每页大小，最大500                                                                                                        |
-| status   | int    | 是   | <p>点控状态<br><strong>-1</strong>: 查询全部状态的点控记录<br><strong>0</strong>: 已失效状态的点控记录<br><strong>1</strong>: 生效中的点控记录</p> |
+| 参数名      | 类型     | 必填 | 描述                                                                                                                 |
+| -------- | ------ | -- | ------------------------------------------------------------------------------------------------------------------ |
+| userid   | string | 是  | 运营商的玩家唯一标识                                                                                                         |
+| gameid   | string | 是  | <p>被控制RTP的游戏ID<br><strong>注意</strong>: 填写<code>ALL</code>时查询全部游戏</p>                                               |
+| page     | int64  | 是  | 页码，从1开始                                                                                                            |
+| pagesize | int64  | 是  | 每页大小，最大500                                                                                                         |
+| status   | int    | 是  | <p>点控状态：<br><strong>-1</strong>: 查询全部状态的点控记录<br><strong>0</strong>: 已失效状态的点控记录<br><strong>1</strong>: 生效中的点控记录</p> |
 
 #### 请求示例
 
@@ -92,10 +92,10 @@ curl --location --request POST '{APIURL}/api/v2/player/getRtpList' \
         "game_name": "【100】Candy Bonanza",
         "game_rtp": 93,
         "control_rtp": 70,
-        "controlling_rtp": 0,
+        "controlling_rtp": 85,
         "person_win_max_mult": 30,
         "person_win_max_score": 1,
-        "restrictions_max_rtp": 0,
+        "restrictions_max_rtp": 100,
         "experience": 0
       }
     ],
