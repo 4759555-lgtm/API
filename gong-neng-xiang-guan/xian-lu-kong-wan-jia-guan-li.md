@@ -6,7 +6,7 @@ icon: objects-align-center-vertical
 
 ## 线路控玩家管理
 
-### POST 添加线路控分组玩家
+### POST 添加玩家至线路控分组
 
 #### 1) 请求地址
 
@@ -14,10 +14,10 @@ URL: `{APIURL}/api/v2/line-provider-group/player/add`
 
 #### 2) 请求参数
 
-| 参数名       | 类型             | 必填 | 描述       |
-| --------- | -------------- | -- | -------- |
-| group\_id | integer        | 是  | 组ID      |
-| uids      | array\[string] | 是  | 玩家唯一ID列表 |
+| 参数名       | 类型             | 必填  | 描述       |
+| --------- | -------------- | --- | -------- |
+| group\_id | integer        | 是   | 组ID      |
+| uids      | array\[string] | 是   | 玩家唯一ID列表 |
 
 示例：
 
@@ -61,7 +61,7 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/add' 
 
 ***
 
-### POST 分页获取线路控分组玩家
+### POST 查询玩家线路控分组
 
 #### 1) 请求地址
 
@@ -69,13 +69,13 @@ URL: `{APIURL}/api/v2/line-provider-group/player/page`
 
 #### 2) 请求参数
 
-| 参数名        | 类型      | 必填 | 描述      |
-| ---------- | ------- | -- | ------- |
-| pid        | integer | 否  | 玩家ID    |
-| aid        | string  | 否  | 商户ID    |
-| gid        | integer | 否  | 组ID     |
-| page       | integer | 是  | 页码，从1开始 |
-| page\_size | integer | 是  | 每页大小    |
+| 参数名        | 类型      | 必填  | 描述      |
+| ---------- | ------- | --- | ------- |
+| pid        | integer | 否   | 玩家ID    |
+| aid        | string  | 否   | 商户ID    |
+| gid        | integer | 否   | 组ID     |
+| page       | integer | 是   | 页码，从1开始 |
+| page\_size | integer | 是   | 每页大小    |
 
 示例：
 
@@ -149,7 +149,7 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/page'
 
 ***
 
-### POST 删除线路控分组玩家
+### POST 删除玩家线路控分组
 
 #### 1) 请求地址
 
@@ -157,9 +157,9 @@ URL: `{APIURL}/api/v2/line-provider-group/player/del`
 
 #### 2) 请求参数
 
-| 参数名 | 类型      | 必填 | 描述   |
-| --- | ------- | -- | ---- |
-| id  | integer | 是  | 记录ID |
+| 参数名 | 类型      | 必填  | 描述   |
+| --- | ------- | --- | ---- |
+| id  | integer | 是   | 记录ID |
 
 示例：
 
@@ -201,7 +201,7 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/del' 
 
 ***
 
-### POST 修改线路控分组玩家
+### POST 修改玩家线路控分组
 
 #### 1) 请求地址
 
@@ -209,11 +209,11 @@ URL: `{APIURL}/api/v2/line-provider-group/player/update`
 
 #### 2) 请求参数
 
-| 参数名     | 类型      | 必填 | 描述   |
-| ------- | ------- | -- | ---- |
-| gid     | integer | 是  | 组ID  |
-| pid     | integer | 是  | 玩家ID |
-| app\_id | string  | 是  | 商户ID |
+| 参数名     | 类型      | 必填  | 描述   |
+| ------- | ------- | --- | ---- |
+| gid     | integer | 是   | 组ID  |
+| pid     | integer | 是   | 玩家ID |
+| app\_id | string  | 是   | 商户ID |
 
 示例：
 
