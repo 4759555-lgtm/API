@@ -10,7 +10,7 @@ icon: distribute-spacing-vertical
 
 #### 1) 请求地址
 
-URL: `{APIURL}/api/v2/line_provider_groups/add`
+> URL: `{APIURL}/api/v2/line_provider_groups/add`
 
 #### 2) 请求参数
 
@@ -82,7 +82,7 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/add' \
 
 #### 1) 请求地址
 
-URL: `{APIURL}/api/v2/line_provider_groups/update`
+> URL: `{APIURL}/api/v2/line_provider_groups/update`
 
 #### 2) 请求参数
 
@@ -157,7 +157,7 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/update' \
 
 #### 1) 请求地址
 
-URL: `{APIURL}/api/v2/line_provider_groups/list`
+> URL: `{APIURL}/api/v2/line_provider_groups/list`
 
 #### 2) 请求参数
 
@@ -243,7 +243,7 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/list' \
 
 #### 1) 请求地址
 
-URL: `{APIURL}/api/v2/line_provider_groups/del`
+> URL: `{APIURL}/api/v2/line_provider_groups/del`
 
 #### 2) 请求参数
 

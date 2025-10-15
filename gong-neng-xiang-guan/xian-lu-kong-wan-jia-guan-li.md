@@ -10,7 +10,7 @@ icon: objects-align-center-vertical
 
 #### 1) 请求地址
 
-URL: `{APIURL}/api/v2/line-provider-group/player/add`
+> URL: `{APIURL}/api/v2/line-provider-group/player/add`
 
 #### 2) 请求参数
 
@@ -65,7 +65,7 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/add' 
 
 #### 1) 请求地址
 
-URL: `{APIURL}/api/v2/line-provider-group/player/page`
+> URL: `{APIURL}/api/v2/line-provider-group/player/page`
 
 #### 2) 请求参数
 
@@ -153,7 +153,7 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/page'
 
 #### 1) 请求地址
 
-URL: `{APIURL}/api/v2/line-provider-group/player/del`
+> URL: `{APIURL}/api/v2/line-provider-group/player/del`
 
 #### 2) 请求参数
 
@@ -205,7 +205,7 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/del' 
 
 #### 1) 请求地址
 
-URL: `{APIURL}/api/v2/line-provider-group/player/update`
+> URL: `{APIURL}/api/v2/line-provider-group/player/update`
 
 #### 2) 请求参数
 

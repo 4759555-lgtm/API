@@ -8,7 +8,7 @@ icon: book-quran
 
 ### 1) 请求地址
 
-URL: `{APIURL}/api/v2/player/getRtpList`
+> URL: `{APIURL}/api/v2/player/getRtpList`
 
 ***
 
