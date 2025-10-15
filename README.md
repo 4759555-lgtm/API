@@ -19,8 +19,8 @@ icon: calendar-check
 2. 审核通过后，游戏厂商方提供运营商后台账号
 3. 运营商登录后台获取以下信息：
 
-&#x20;    {OPURL}  接口地址
 
+* {OPURL}：接口地址
 * `AppID`：商户号（商户名称）
 * `AppSecret`：商户编码
 
