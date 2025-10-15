@@ -14,19 +14,19 @@ icon: joystick
 
 | 参数名      | 类型            | 描述            |
 | -------- | ------------- | ------------- |
-| UserID   | string\[4-40] | 运营商玩家唯一标识     |
-| GameID   | string        | 游戏 ID         |
+| userid   | string\[4-40] | 运营商玩家唯一标识     |
+| gameid   | string        | 游戏 ID         |
 | Language | string        | 语言设定 th, en … |
 
-*   示例：
-
-    ```json
-    {
-        "userid": "abc",
-        "gameid": "pg_98",
-        "language": "th"
-    }
-    ```
+* 示例：
+  
+  ```json
+  {
+      "userid": "abc",
+      "gameid": "pg_98",
+      "language": "th"
+  }
+  ```
 
 请求示例代码：
 
@@ -49,13 +49,13 @@ curl --location --request POST 'https://{APIURL}/api/v1/game/launch' \
 | --- | ------ | ------- |
 | url | string | 游戏登录URL |
 
-*   示例：
-
-    <pre class="language-json"><code class="lang-json"><strong>{
-    </strong>"code": 0,
-    "error": "",
-    "data": {
-      "url": "https://popapi.cc/pg_98/index.html?l=th&#x26;t=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxODcsIlMiOjEwMDIsIkQiOiJYaW5nWXVuWGlhbmcifQ.9td-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxmw"
-     }
-    }
-    </code></pre>
+* 示例：
+  
+  <pre class="language-json"><code class="lang-json"><strong>{
+  </strong>"code": 0,
+  "error": "",
+  "data": {
+    "url": "https://popapi.cc/pg_98/index.html?l=th&#x26;t=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxODcsIlMiOjEwMDIsIkQiOiJYaW5nWXVuWGlhbmcifQ.9td-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxmw"
+   }
+  }
+  </code></pre>
