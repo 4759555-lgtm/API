@@ -1,4 +1,4 @@
-# HG API 对接文档
+# Table of contents
 
 ## 快速开始
 
@@ -17,11 +17,11 @@
 
 ## 转账钱包
 
+* [获取玩家余额](zhuan-zhang-qian-bao/huo-qu-wan-jia-yu-e.md)
 * [玩家转入](zhuan-zhang-qian-bao/wan-jia-zhuan-ru.md)
 * [玩家转出](zhuan-zhang-qian-bao/wan-jia-zhuan-chu.md)
 * [玩家转出所有余额](zhuan-zhang-qian-bao/wan-jia-zhuan-chu-suo-you-yu-e.md)
 * [查询订单](zhuan-zhang-qian-bao/cha-xun-ding-dan.md)
-* [获取玩家余额](zhuan-zhang-qian-bao/huo-qu-wan-jia-yu-e.md)
 
 ## 报表相关
 
