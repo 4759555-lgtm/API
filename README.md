@@ -79,8 +79,6 @@ e3f8dc79e875e46f6755ef540c2d24f3
 
 当平台返回的http code为200时，为HTTP访问API正常，可正常解析返回结果。其余http错误时为链路异常。 返回的Content-Type为 **"application/json; charset=utf-8"**
 
-Copy
-
 ```json
 {
     "code": 1,
