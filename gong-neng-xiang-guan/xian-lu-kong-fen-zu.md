@@ -33,7 +33,7 @@ URL: `{APIURL}/api/v2/line_provider_groups/add`
 请求示例代码：
 
 ```bash
-curl --location --request POST '{{APIURL}}/api/v2/line_provider_groups/add' \
+curl --location --request POST '{APIURL}/api/v2/line_provider_groups/add' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "is_control_rtp": 1,
@@ -82,7 +82,7 @@ curl --location --request POST '{{APIURL}}/api/v2/line_provider_groups/add' \
 
 #### 1) 请求地址
 
-URL: `{{APIURL}}/api/v2/line_provider_groups/update`
+URL: `{APIURL}/api/v2/line_provider_groups/update`
 
 #### 2) 请求参数
 
@@ -107,7 +107,7 @@ URL: `{{APIURL}}/api/v2/line_provider_groups/update`
 请求示例代码：
 
 ```bash
-curl --location --request POST '{{APIURL}}/api/v2/line_provider_groups/update' \
+curl --location --request POST '{APIURL}/api/v2/line_provider_groups/update' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "id": 100001,
@@ -157,7 +157,7 @@ curl --location --request POST '{{APIURL}}/api/v2/line_provider_groups/update' \
 
 #### 1) 请求地址
 
-URL: `{{APIURL}}/api/v2/line_provider_groups/list`
+URL: `{APIURL}/api/v2/line_provider_groups/list`
 
 #### 2) 请求参数
 
@@ -178,7 +178,7 @@ URL: `{{APIURL}}/api/v2/line_provider_groups/list`
 请求示例代码：
 
 ```bash
-curl --location --request POST '{{APIURL}}/api/v2/line_provider_groups/list' \
+curl --location --request POST '{APIURL}/api/v2/line_provider_groups/list' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "page": 1,
@@ -243,7 +243,7 @@ curl --location --request POST '{{APIURL}}/api/v2/line_provider_groups/list' \
 
 #### 1) 请求地址
 
-URL: `{{APIURL}}/api/v2/line_provider_groups/del`
+URL: `{APIURL}/api/v2/line_provider_groups/del`
 
 #### 2) 请求参数
 
@@ -262,7 +262,7 @@ URL: `{{APIURL}}/api/v2/line_provider_groups/del`
 请求示例代码：
 
 ```bash
-curl --location --request POST '{{APIURL}}/api/v2/line_provider_groups/del' \
+curl --location --request POST '{APIURL}/api/v2/line_provider_groups/del' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "id": 100001

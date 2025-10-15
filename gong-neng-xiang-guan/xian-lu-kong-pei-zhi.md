@@ -48,8 +48,8 @@ icon: objects-align-left
 
 **请求代码示例：**
 
-```powershell
-curl --location --request POST 'https://hpgamecenter.pg-nmx.com/api/v2/line_provider_config/add' \
+```bash
+curl --location --request POST 'https://{APIURL}/api/v2/line_provider_config/add' \
 --header 'X-Sign;' \
 --header 'X-Request-Id;' \
 --header 'X-Appid;' \
@@ -104,8 +104,8 @@ curl --location --request POST 'https://hpgamecenter.pg-nmx.com/api/v2/line_prov
 
 **请求代码示例：**
 
-```powershell
-curl --location --request POST 'https://hpgamecenter.pg-nmx.com/api/v2/line_provider_config/del' \
+```bash
+curl --location --request POST 'https://{APIURL}/api/v2/line_provider_config/del' \
 --header 'X-Sign;' \
 --header 'X-Request-Id;' \
 --header 'X-Appid;' \
@@ -151,8 +151,8 @@ curl --location --request POST 'https://hpgamecenter.pg-nmx.com/api/v2/line_prov
 
 **请求代码示例：**
 
-```powershell
-curl --location --request POST 'https://hpgamecenter.pg-nmx.com/api/v2/line_provider_config/list' \
+```bash
+curl --location --request POST 'https://{APIURL}/api/v2/line_provider_config/list' \
 --header 'X-Sign;' \
 --header 'X-Request-Id;' \
 --header 'X-Appid;' \

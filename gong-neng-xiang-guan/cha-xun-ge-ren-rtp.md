@@ -39,7 +39,7 @@ URL: `{APIURL}/api/v2/player/getRtpList`
 #### 请求示例代码
 
 ```bash
-curl --location --request POST '{{APIURL}}/api/v2/player/getRtpList' \
+curl --location --request POST '{APIURL}/api/v2/player/getRtpList' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "uid": "f-09261620",

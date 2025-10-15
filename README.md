@@ -1,15 +1,15 @@
 ---
 icon: calendar-check
 ---
-231231tets
+
 # 公共说明和错误码
 
 ### 1. 运营商接入说明
 
 #### 基本信息
 
-* **API提供方**：游戏厂商方（我方）
-* **接入方**：运营商
+* **API提供方{APIURL}**：游戏厂商方（我方）
+* **接入方{OPURL}**：运营商
 * **服务器时区**：UTC+0（接入时需注意数据统计的时区计算）
 * **成功标识**：接口返回 `code = 0` 表示成功
 
@@ -20,7 +20,7 @@ icon: calendar-check
 3. 运营商登录后台获取以下信息：
 
 
-* {OPURL}：接口地址
+* {APIURL}：接口地址
 * `AppID`：商户号（商户名称）
 * `AppSecret`：商户编码
 
@@ -46,15 +46,10 @@ icon: calendar-check
 
 **注意这里的body中的json字符串必须是请求中最原始的body中的字符，不能使用json包转出来之后的字符，最终使用小写输出**
 
-类型值
 
-请求url
+请求url : `{APIURL}`/api/v1/game/list
 
-`{API_URL}`/api/v1/game/list
-
-请求方式
-
-POST
+请求方式 : POST
 
 Content-Type  "application/json; charset=utf-8"
 
@@ -86,7 +81,7 @@ e3f8dc79e875e46f6755ef540c2d24f3
 
 Copy
 
-```
+```json
 {
     "code": 1,
     "msg": "success",
@@ -195,4 +190,4 @@ Copy
 
 ### 5. 技术支持
 
-如有技术问题或需要进一步的接入支持，请联系我方技术团队。
+如有技术问题或需要进一步的接入支持，请联系我方客服团队。

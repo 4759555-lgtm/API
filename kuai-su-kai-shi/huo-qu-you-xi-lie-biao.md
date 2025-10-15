@@ -27,7 +27,7 @@ icon: gamepad-modern
 请求示例代码：
 
 ```
-curl --location --request POST 'https://hpgamecenter.pg-nmx.com/api/v1/game/list' \
+curl --location --request POST 'https://{APIURL}/api/v1/game/list' \
 --header 'X-Sign;' \
 --header 'X-Request-Id;' \
 --header 'X-Appid;' \

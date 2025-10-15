@@ -30,8 +30,8 @@ icon: joystick
 
 请求示例代码：
 
-```powershell
-curl --location --request POST 'https://hpgamecenter.pg-nmx.com/api/v1/game/launch' \
+```bash
+curl --location --request POST 'https://{APIURL}/api/v1/game/launch' \
 --header 'X-Sign;' \
 --header 'X-Request-Id;' \
 --header 'X-Appid;' \

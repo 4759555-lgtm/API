@@ -31,7 +31,7 @@ URL: `{APIURL}/api/v2/line-provider-group/player/add`
 请求示例代码：
 
 ```bash
-curl --location --request POST '{{APIURL}}/api/v2/line-provider-group/player/add' \
+curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/add' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "group_id": 100002,
@@ -92,7 +92,7 @@ URL: `{APIURL}/api/v2/line-provider-group/player/page`
 请求示例代码：
 
 ```bash
-curl --location --request POST '{{APIURL}}/api/v2/line-provider-group/player/page' \
+curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/page' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "pid": 107998,
@@ -153,7 +153,7 @@ curl --location --request POST '{{APIURL}}/api/v2/line-provider-group/player/pag
 
 #### 1) 请求地址
 
-URL: `{{APIURL}}/api/v2/line-provider-group/player/del`
+URL: `{APIURL}/api/v2/line-provider-group/player/del`
 
 #### 2) 请求参数
 
@@ -172,7 +172,7 @@ URL: `{{APIURL}}/api/v2/line-provider-group/player/del`
 请求示例代码：
 
 ```bash
-curl --location --request POST '{{APIURL}}/api/v2/line-provider-group/player/del' \
+curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/del' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "id": 100002
@@ -205,7 +205,7 @@ curl --location --request POST '{{APIURL}}/api/v2/line-provider-group/player/del
 
 #### 1) 请求地址
 
-URL: `{{APIURL}}/api/v2/line-provider-group/player/update`
+URL: `{APIURL}/api/v2/line-provider-group/player/update`
 
 #### 2) 请求参数
 
@@ -228,7 +228,7 @@ URL: `{{APIURL}}/api/v2/line-provider-group/player/update`
 请求示例代码：
 
 ```bash
-curl --location --request POST '{{APIURL}}/api/v2/line-provider-group/player/update' \
+curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/update' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "gid": 100003,

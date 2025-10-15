@@ -35,8 +35,8 @@ icon: calculator-simple
 
 请求示例代码：
 
-```powershell
-curl --location --request POST 'https://hpgamecenter.pg-nmx.com/api/v2/operator/setRtp' \
+```bash
+curl --location --request POST 'https://{APIURL}/api/v2/operator/setRtp' \
 --header 'X-Sign;' \
 --header 'X-Request-Id;' \
 --header 'X-Appid;' \
