@@ -14,11 +14,11 @@ icon: distribute-spacing-vertical
 
 #### 2) 请求参数
 
-| 参数名              | 类型      | 必填 | 描述        |
-| ---------------- | ------- | -- | --------- |
-| is\_control\_rtp | integer | 是  | 是否启用RTP控制 |
-| groups\_name     | string  | 是  | 分组名称      |
-| config\_id       | integer | 是  | 线路控配置ID   |
+| 参数名              | 类型      | 必填  | 描述        |
+| ---------------- | ------- | --- | --------- |
+| is\_control\_rtp | integer | 是   | 是否启用RTP控制 |
+| groups\_name     | string  | 是   | 分组名称      |
+| config\_id       | integer | 是   | 线路控配置ID   |
 
 示例：
 
@@ -54,7 +54,6 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/add' \
 | line\_provider\_groups | object  | 线路控分组对象   |
 | id                     | integer | 分组ID      |
 | is\_control\_rtp       | integer | 是否启用RTP控制 |
-| app\_id                | string  | 应用ID      |
 | groups\_name           | string  | 分组名称      |
 | config\_id             | integer | 线路控配置ID   |
 
@@ -68,7 +67,6 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/add' \
     "line_provider_groups":{
       "id": 100001,
       "is_control_rtp": 1,
-      "app_id": "qwe456_USD_2",
       "groups_name": "aa",
       "config_id": 100003
     }
@@ -86,12 +84,12 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/add' \
 
 #### 2) 请求参数
 
-| 参数名              | 类型      | 必填 | 描述        |
-| ---------------- | ------- | -- | --------- |
-| id               | integer | 是  | 分组ID      |
-| is\_control\_rtp | integer | 是  | 是否启用RTP控制 |
-| groups\_name     | string  | 是  | 分组名称      |
-| config\_id       | integer | 是  | 线路控配置ID   |
+| 参数名              | 类型      | 必填  | 描述        |
+| ---------------- | ------- | --- | --------- |
+| id               | integer | 是   | 分组ID      |
+| is\_control\_rtp | integer | 是   | 是否启用RTP控制 |
+| groups\_name     | string  | 是   | 分组名称      |
+| config\_id       | integer | 是   | 线路控配置ID   |
 
 示例：
 
@@ -129,7 +127,6 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/update' \
 | line\_provider\_groups | object  | 线路控分组对象     |
 | id                     | integer | 分组ID        |
 | is\_control\_rtp       | integer | 是否启用RTP控制   |
-| app\_id                | string  | 应用ID        |
 | groups\_name           | string  | 分组名称        |
 | config\_id             | integer | 线路控配置ID     |
 
@@ -143,7 +140,6 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/update' \
     "line_provider_groups": {
       "id": 100001,
       "is_control_rtp": 2,
-      "app_id": "qwe456_USD_2",
       "groups_name": "bb",
       "config_id": 100003
     }
@@ -161,10 +157,10 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/update' \
 
 #### 2) 请求参数
 
-| 参数名        | 类型      | 必填 | 描述      |
-| ---------- | ------- | -- | ------- |
-| page       | integer | 是  | 页码，从1开始 |
-| page\_size | integer | 是  | 每页大小    |
+| 参数名        | 类型      | 必填  | 描述      |
+| ---------- | ------- | --- | ------- |
+| page       | integer | 是   | 页码，从1开始 |
+| page\_size | integer | 是   | 每页大小    |
 
 示例：
 
@@ -202,7 +198,6 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/list' \
 | line\_provider\_groups | array   | 线路控分组列表     |
 | id                     | integer | 分组ID        |
 | is\_control\_rtp       | integer | 是否启用RTP控制   |
-| app\_id                | string  | 应用ID        |
 | groups\_name           | string  | 分组名称        |
 | config\_id             | integer | 线路控配置ID     |
 
@@ -221,7 +216,6 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/list' \
       {
         "id": 100001,
         "is_control_rtp": 2,
-        "app_id": "qwe456_USD_2",
         "groups_name": "bb",
         "config_id": 100003
       },
@@ -247,9 +241,9 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/list' \
 
 #### 2) 请求参数
 
-| 参数名 | 类型      | 必填 | 描述   |
-| --- | ------- | -- | ---- |
-| id  | integer | 是  | 分组ID |
+| 参数名 | 类型      | 必填  | 描述   |
+| --- | ------- | --- | ---- |
+| id  | integer | 是   | 分组ID |
 
 示例：
 

@@ -17,14 +17,14 @@ icon: objects-align-center-vertical
 | 参数名       | 类型             | 必填  | 描述       |
 | --------- | -------------- | --- | -------- |
 | group\_id | integer        | 是   | 组ID      |
-| uids      | array\[string] | 是   | 玩家唯一ID列表 |
+| userids   | array\[string] | 是   | 玩家唯一ID列表 |
 
 示例：
 
 ```json
 {
   "group_id": 100002,
-  "uids": ["test_web", "test_web1"]
+  "userids": ["test_web", "test_web1"]
 }
 ```
 
@@ -35,7 +35,7 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/add' 
 --header 'Content-Type: application/json' \
 --data-raw '{
   "group_id": 100002,
-  "uids": ["test_web", "test_web1"]
+  "userids": ["test_web", "test_web1"]
 }'
 ```
 
@@ -71,9 +71,8 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/add' 
 
 | 参数名        | 类型      | 必填  | 描述      |
 | ---------- | ------- | --- | ------- |
-| pid        | integer | 否   | 玩家ID    |
-| aid        | string  | 否   | 商户ID    |
-| gid        | integer | 否   | 组ID     |
+| userid     | string  | 否   | 玩家ID    |
+| group_id   | integer | 否   | 组ID     |
 | page       | integer | 是   | 页码，从1开始 |
 | page\_size | integer | 是   | 每页大小    |
 
@@ -81,9 +80,8 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/add' 
 
 ```json
 {
-  "pid": 107998,
-  "aid": "qwe456_USD_1",
-  "gid": 0,
+  "userid": "su998",
+  "group_id": 0,
   "page": 1,
   "page_size": 20
 }
@@ -95,7 +93,7 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/add' 
 curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/page' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "pid": 107998,
+  "userid": 107998,
   "aid": "qwe456_USD_1",
   "gid": 0,
   "page": 1,
@@ -121,7 +119,7 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/page'
 | group\_id   | integer | 组ID       |
 | group\_name | string  | 组名称       |
 | app\_id     | string  | 商户ID      |
-| pid         | integer | 玩家ID      |
+| userid      | integer | 玩家ID      |
 
 示例：
 
@@ -140,7 +138,7 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/page'
         "group_id": 100002,
         "group_name": "bb",
         "app_id": "qwe456_USD_2",
-        "pid": 107998
+        "userid": "su998"
       }
     ]
   }
@@ -157,15 +155,15 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/page'
 
 #### 2) 请求参数
 
-| 参数名 | 类型      | 必填  | 描述   |
-| --- | ------- | --- | ---- |
-| id  | integer | 是   | 记录ID |
+| 参数名     | 类型      | 必填  | 描述   |
+| ------- | ------- | --- | ---- |
+| userids | integer | 是   | 玩家昵称 |
 
 示例：
 
 ```json
 {
-  "id": 100002
+  "userid": "su998"
 }
 ```
 
@@ -175,7 +173,7 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/page'
 curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/del' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "id": 100002
+  "userid": "su998"
 }'
 ```
 
@@ -209,18 +207,18 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/del' 
 
 #### 2) 请求参数
 
-| 参数名     | 类型      | 必填  | 描述   |
-| ------- | ------- | --- | ---- |
-| gid     | integer | 是   | 组ID  |
-| pid     | integer | 是   | 玩家ID |
-| app\_id | string  | 是   | 商户ID |
+| 参数名      | 类型      | 必填  | 描述   |
+| -------- | ------- | --- | ---- |
+| group_id | integer | 是   | 组ID  |
+| userid   | integer | 是   | 玩家ID |
+| app\_id  | string  | 是   | 商户ID |
 
 示例：
 
 ```json
 {
-  "gid": 100003,
-  "pid": 107998,
+  "group_id": 100003,
+  "userid": "su998",
   "app_id": "qwe456_USD_2"
 }
 ```
@@ -231,8 +229,8 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/del' 
 curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/update' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "gid": 100003,
-  "pid": 107998,
+  "group_id": 100003,
+  "userid": 107998,
   "app_id": "qwe456_USD_2"
 }'
 ```
