@@ -21,17 +21,18 @@ icon: calculator-simple
 | max\_multiple    | int    | 最大赢钱倍数，非必填项，如果不填设置默认值100。当设置的值为非0值时，`最小值`为`1`，`最大值`为`10000`，当填写的值不在范围内将会报错。                                                                                                                                              |
 | max\_win\_points | int    | 最大赢钱数，非必填项，如果不填设置默认值1000000。当设置的值为非0值时，`最小值`为`1`，`最大值`为`100000000`，当填写的值不在范围内将会报错。                                                                                                                                       |
 
-*   示例：
-
-    ```json
-    {
-    "game_pattern": 1,
-    "rtp": 30,
-    "game_id": "pg_1381200",
-    "AppID": "qwe456_USD_1",
-    "Sign": "34d5f21a93efff68f55f891d211ad5bb"
-    }
-    ```
+* 示例：
+  
+  ```json
+  {
+      "game_pattern": 1,
+      "rtp": 30,
+      "gameid": "pg_1381200",
+      "game_type": 0,
+      "max_win_points": 10000,
+      "max_multiple": 100
+  }
+  ```
 
 请求示例代码：
 
@@ -58,14 +59,14 @@ curl --location --request POST 'https://{APIURL}/api/v2/operator/setRtp' \
 | ------- | ----- | ---- |
 | app\_id | sting | 商户id |
 
-*   示例：
-
-    ```json
-    {
-      "code": 0,
-      "error": "",
-      "data": {
-          "app_id": "qwe456"
-      }
+* 示例：
+  
+  ```json
+  {
+    "code": 0,
+    "error": "",
+    "data": {
+        "app_id": "qwe456"
     }
-    ```
+  }
+  ```
