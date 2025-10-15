@@ -20,8 +20,8 @@ icon: file-waveform
 | gameid    | string | 游戏ID（可不填，不填查询所有游戏）                                                |
 | page      | Int    | 当前页                                                               |
 | pagesize  | Int    | 查询条数。注意：单次查询最多不能超过10000条                                          |
-| starttime | Int    | 查询起始时间 时间戳                                                        |
-| endtime   | Int    | 查询结束时间 时间戳                                                        |
+| starttime | Int    | 查询起始时间(UTC时间戳)                                                        |
+| endtime   | Int    | 查询结束时间(UTC时间戳)                                                        |
 | sort      | Bool   | <p>排序方式，非必填项，不填为默认值false，返回结果按时间降序排序。<br>当值为true时，返回结果按时间升序排序</p> |
 
 *   示例：
