@@ -45,7 +45,7 @@ curl --location --request POST 'https://{APIURL}/api/v1/game/list' \
 
     ```
     {
-        "code": 200,
+        "code": 0,
         "error": "",
         "data": {
             "list": [

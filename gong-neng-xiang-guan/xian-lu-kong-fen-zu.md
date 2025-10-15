@@ -123,7 +123,7 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/update' \
 
 | 参数名                    | 类型      | 描述          |
 | ---------------------- | ------- | ----------- |
-| code                   | integer | 状态码，200表示成功 |
+| code                   | integer | 状态码，0表示成功 |
 | error                  | string  | 错误信息        |
 | data                   | object  | 返回数据        |
 | line\_provider\_groups | object  | 线路控分组对象     |
@@ -192,7 +192,7 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/list' \
 
 | 参数名                    | 类型      | 描述          |
 | ---------------------- | ------- | ----------- |
-| code                   | integer | 状态码，200表示成功 |
+| code                   | integer | 状态码，0表示成功 |
 | error                  | string  | 错误信息        |
 | data                   | object  | 返回数据        |
 | page                   | integer | 当前页码        |
@@ -210,7 +210,7 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/list' \
 
 ```json
 {
-  "code": 200,
+  "code": 0,
   "error": "",
   "data": {
     "page": 1,
@@ -275,7 +275,7 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/del' \
 
 | 参数名     | 类型      | 描述          |
 | ------- | ------- | ----------- |
-| code    | integer | 状态码，200表示成功 |
+| code    | integer | 状态码，0表示成功 |
 | error   | string  | 错误信息        |
 | data    | object  | 返回数据        |
 | message | string  | 操作结果信息      |

@@ -74,7 +74,7 @@ $$
 
 ### 响应规范
 
-- **HTTP状态码**：200 表示 HTTP 访问正常，其他状态码表示链路异常。
+- **HTTP状态码**：0 表示 HTTP 访问正常，其他状态码表示链路异常。
 - **Content-Type**：`application/json;charset=UTF-8`
 - **响应格式**：`{"code": int, "error": string, "data": object}`
 
