@@ -4,9 +4,7 @@ icon: coin
 
 # 玩家转入
 
-玩家转入V1
-
-#### 玩家转入V1 <a href="#wan-jia-zhuan-ru-v1" id="wan-jia-zhuan-ru-v1"></a>
+#### 玩家转入 <a href="#wan-jia-zhuan-ru-v1" id="wan-jia-zhuan-ru-v1"></a>
 
 **1) 请求地址**
 
@@ -20,15 +18,15 @@ icon: coin
 | amount  | float         | 转入金额 >0，最大1亿 |
 | traceid | string\[4-40] | 交易单号         |
 
-*   示例：
-
-    ```json
-    {
-        "userid": "string",
-        "amount": 0,
-        "traceid": "string"
-    }
-    ```
+* 示例：
+  
+  ```json
+  {
+      "userid": "string",
+      "amount": 0,
+      "traceid": "string"
+  }
+  ```
 
 请求示例代码：
 
@@ -47,29 +45,37 @@ curl --location --request POST 'https://{APIURL}/api/v1/player/transferIn' \
 
 **3) 返回结果:**
 
-| 参数名            | 类型    | 描述      |
-| -------------- | ----- | ------- |
-| after\_balance | float | 充值成功后余额 |
+| 参数名                 | 类型      | 描述            |
+| ------------------- | ------- | ------------- |
+| code                | integer | 返回状态码，0 表示成功  |
+| error               | string  | 错误信息，成功时为空字符串 |
+| data                | object  | 返回数据          |
+| data.after\_balance | float   | 充值成功后余额       |
+
+
 
 * 正常返回
-*   示例：
 
-    ```json
-    {
-        "code": 0,
-        "error": "",
-        "data": {
-            "after_balance": 493.8
-        }
-    }
-    ```
+* 示例：
+  
+  ```json
+  {
+      "code": 0,
+      "error": "",
+      "data": {
+          "after_balance": 493.8
+      }
+  }
+  ```
+
 * 订单重复
-*   示例：
 
-    ```json
-    {
-    "code": 1,
-    "error": "Order already exists",
-    "data": null
-    }
-    ```
+* 示例：
+  
+  ```json
+  {
+  "code": 1,
+  "error": "Order already exists",
+  "data": null
+  }
+  ```

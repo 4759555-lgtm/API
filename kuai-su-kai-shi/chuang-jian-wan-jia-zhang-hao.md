@@ -17,14 +17,14 @@ icon: user-shakespeare
 | userid   | string\[4-40] | 运营商的玩家唯一标识（注意不能填特殊字符，例如”。建议仅使用数字，英文，下划线。） |
 | username | string\[4-40] | 玩家昵称（可选）                                  |
 
-*   示例：
-
-    ```json
-    {
-        "userid": "abc22",
-        "username": "abc22"
-    }
-    ```
+* 示例：
+  
+  ```json
+  {
+      "userid": "abc22",
+      "username": "abc22"
+  }
+  ```
 
 请求示例代码：
 
@@ -46,16 +46,18 @@ curl --location --request POST 'https://{APIURL}/api/v1/player/create' \
 | --- | ----- | -------- |
 | pid | int64 | 平台玩家唯一标识 |
 
-*   示例：
+* 示例：
+  
+  ```json
+  {
+  
+  "error": "",
+  "data": {
+    "pid": 100064
+   }
+  }
+  ```
 
-    ```json
-    {
-    "error": "",
-    "data": {
-      "pid": 100064
-     }
-    }
-    ```
 * 重复创建同一个玩家, 返回相同的结果
-* /api/v1/player/transferIn 和 /api/v1/game/launch 会自动创建玩家
 
+* /api/v1/player/transferIn 和 /api/v1/game/launch 会自动创建玩家

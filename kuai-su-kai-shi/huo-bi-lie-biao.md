@@ -22,7 +22,6 @@ icon: list-timeline
 | 31   | BUSD    | BUSD   | 美元币        |
 | 37   | DOGE    | Ɖ      | 狗狗币        |
 | 73   | MATIC   | MATIC  | Polygon原生币 |
-| 79   | CNY     | ¥      | 人民币        |
 | 82   | COP     | $      | 哥伦比亚比索     |
 | 84   | PRK     | PKR    | 巴基斯坦卢比     |
 | 105  | TRX     | TRX    | 波场币        |

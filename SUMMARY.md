@@ -2,8 +2,8 @@
 
 ## 快速开始
 
-* [公共说明&错误码](README.md)
-* [游戏列表&支持语言](kuai-su-kai-shi/you-xi-lie-biao-he-zhi-chi-yu-yan.md)
+* [公共说明和错误码](README.md)
+* [游戏列表和支持语言](kuai-su-kai-shi/you-xi-lie-biao-he-zhi-chi-yu-yan.md)
 * [货币列表](kuai-su-kai-shi/huo-bi-lie-biao.md)
 * [创建玩家帐号](kuai-su-kai-shi/chuang-jian-wan-jia-zhang-hao.md)
 * [获取游戏列表](kuai-su-kai-shi/huo-qu-you-xi-lie-biao.md)

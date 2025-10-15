@@ -14,16 +14,16 @@ icon: objects-align-center-vertical
 
 #### 2) 请求参数
 
-| 参数名       | 类型             | 必填  | 描述       |
-| --------- | -------------- | --- | -------- |
-| group\_id | integer        | 是   | 组ID      |
-| userids   | array\[string] | 是   | 玩家唯一ID列表 |
+| 参数名     | 类型             | 必填  | 描述       |
+| ------- | -------------- | --- | -------- |
+| groupid | integer        | 是   | 组ID      |
+| userids | array\[string] | 是   | 玩家唯一ID列表 |
 
 示例：
 
 ```json
 {
-  "group_id": 100002,
+  "groupid": 100002,
   "userids": ["test_web", "test_web1"]
 }
 ```
@@ -43,11 +43,11 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/add' 
 
 **响应参数**
 
-| 参数名   | 类型      | 描述          |
-| ----- | ------- | ----------- |
+| 参数名   | 类型      | 描述        |
+| ----- | ------- | --------- |
 | code  | integer | 状态码，0表示成功 |
-| error | string  | 错误信息        |
-| data  | object  | 返回数据        |
+| error | string  | 错误信息      |
+| data  | object  | 返回数据      |
 
 示例：
 
@@ -94,8 +94,7 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/page'
 --header 'Content-Type: application/json' \
 --data-raw '{
   "userid": 107998,
-  "aid": "qwe456_USD_1",
-  "gid": 0,
+  "appid": "qwe456_USD_1",
   "page": 1,
   "page_size": 20
 }'
@@ -163,7 +162,7 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/page'
 
 ```json
 {
-  "userid": "su998"
+  "userids": "su998"
 }
 ```
 
@@ -173,7 +172,7 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/page'
 curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/del' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "userid": "su998"
+  "userids": "su998"
 }'
 ```
 
@@ -181,11 +180,11 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/del' 
 
 **响应参数**
 
-| 参数名   | 类型      | 描述          |
-| ----- | ------- | ----------- |
+| 参数名   | 类型      | 描述        |
+| ----- | ------- | --------- |
 | code  | integer | 状态码，0表示成功 |
-| error | string  | 错误信息        |
-| data  | object  | 返回数据        |
+| error | string  | 错误信息      |
+| data  | object  | 返回数据      |
 
 示例：
 

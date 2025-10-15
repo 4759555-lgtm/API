@@ -18,7 +18,7 @@ icon: distribute-spacing-vertical
 | ---------------- | ------- | --- | --------- |
 | is\_control\_rtp | integer | 是   | 是否启用RTP控制 |
 | groups\_name     | string  | 是   | 分组名称      |
-| config\_id       | integer | 是   | 线路控配置ID   |
+| configid         | integer | 是   | 线路控配置ID   |
 
 示例：
 
@@ -26,7 +26,7 @@ icon: distribute-spacing-vertical
 {
   "is_control_rtp": 1,
   "groups_name": "aa",
-  "config_id": 100003
+  "configid": 100003
 }
 ```
 
@@ -55,7 +55,7 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/add' \
 | id                     | integer | 分组ID      |
 | is\_control\_rtp       | integer | 是否启用RTP控制 |
 | groups\_name           | string  | 分组名称      |
-| config\_id             | integer | 线路控配置ID   |
+| configid               | integer | 线路控配置ID   |
 
 示例：
 
@@ -84,19 +84,19 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/add' \
 
 #### 2) 请求参数
 
-| 参数名              | 类型      | 必填  | 描述        |
-| ---------------- | ------- | --- | --------- |
-| id               | integer | 是   | 分组ID      |
-| is\_control\_rtp | integer | 是   | 是否启用RTP控制 |
-| groups\_name     | string  | 是   | 分组名称      |
-| config\_id       | integer | 是   | 线路控配置ID   |
+| 参数名              | 类型      | 必填  | 描述               |
+| ---------------- | ------- | --- | ---------------- |
+| id               | integer | 是   | 分组ID             |
+| is\_control\_rtp | integer | 是   | 是否启用RTP控制，可填值0,1 |
+| groups\_name     | string  | 是   | 分组名称             |
+| configid         | integer | 是   | 线路控配置ID          |
 
 示例：
 
 ```json
 {
   "id": 100001,
-  "is_control_rtp": 2,
+  "is_control_rtp": 1,
   "groups_name": "bb",
   "config_id": 100005
 }
@@ -109,7 +109,7 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/update' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "id": 100001,
-  "is_control_rtp": 2,
+  "is_control_rtp": 1,
   "groups_name": "bb",
   "config_id": 100005
 }'
@@ -119,16 +119,16 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/update' \
 
 **响应参数**
 
-| 参数名                    | 类型      | 描述          |
-| ---------------------- | ------- | ----------- |
+| 参数名                    | 类型      | 描述        |
+| ---------------------- | ------- | --------- |
 | code                   | integer | 状态码，0表示成功 |
-| error                  | string  | 错误信息        |
-| data                   | object  | 返回数据        |
-| line\_provider\_groups | object  | 线路控分组对象     |
-| id                     | integer | 分组ID        |
-| is\_control\_rtp       | integer | 是否启用RTP控制   |
-| groups\_name           | string  | 分组名称        |
-| config\_id             | integer | 线路控配置ID     |
+| error                  | string  | 错误信息      |
+| data                   | object  | 返回数据      |
+| line\_provider\_groups | object  | 线路控分组对象   |
+| id                     | integer | 分组ID      |
+| is\_control\_rtp       | integer | 是否启用RTP控制 |
+| groups\_name           | string  | 分组名称      |
+| configid               | integer | 线路控配置ID   |
 
 示例：
 
@@ -186,20 +186,20 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/list' \
 
 **响应参数**
 
-| 参数名                    | 类型      | 描述          |
-| ---------------------- | ------- | ----------- |
+| 参数名                    | 类型      | 描述        |
+| ---------------------- | ------- | --------- |
 | code                   | integer | 状态码，0表示成功 |
-| error                  | string  | 错误信息        |
-| data                   | object  | 返回数据        |
-| page                   | integer | 当前页码        |
-| page\_size             | integer | 每页大小        |
-| pages                  | integer | 总页数         |
-| total                  | integer | 总记录数        |
-| line\_provider\_groups | array   | 线路控分组列表     |
-| id                     | integer | 分组ID        |
-| is\_control\_rtp       | integer | 是否启用RTP控制   |
-| groups\_name           | string  | 分组名称        |
-| config\_id             | integer | 线路控配置ID     |
+| error                  | string  | 错误信息      |
+| data                   | object  | 返回数据      |
+| page                   | integer | 当前页码      |
+| page\_size             | integer | 每页大小      |
+| pages                  | integer | 总页数       |
+| total                  | integer | 总记录数      |
+| line\_provider\_groups | array   | 线路控分组列表   |
+| id                     | integer | 分组ID      |
+| is\_control\_rtp       | integer | 是否启用RTP控制 |
+| groups\_name           | string  | 分组名称      |
+| configid               | integer | 线路控配置ID   |
 
 示例：
 
@@ -267,12 +267,12 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/del' \
 
 **响应参数**
 
-| 参数名     | 类型      | 描述          |
-| ------- | ------- | ----------- |
+| 参数名     | 类型      | 描述        |
+| ------- | ------- | --------- |
 | code    | integer | 状态码，0表示成功 |
-| error   | string  | 错误信息        |
-| data    | object  | 返回数据        |
-| message | string  | 操作结果信息      |
+| error   | string  | 错误信息      |
+| data    | object  | 返回数据      |
+| message | string  | 操作结果信息    |
 
 示例：
 

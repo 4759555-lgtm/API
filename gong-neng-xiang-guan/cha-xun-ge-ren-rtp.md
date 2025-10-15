@@ -55,26 +55,26 @@ curl --location --request POST '{APIURL}/api/v2/player/getRtpList' \
 
 #### 响应参数说明
 
-| 参数名                     | 类型      | 层级  | 描述               |
-| ----------------------- | ------- | --- | ---------------- |
-| code                    | integer | 1   | 状态码，0表示成功        |
-| error                   | string  | 1   | 错误信息，成功时为空       |
-| data                    | object  | 1   | 返回数据             |
-| list                    | array   | 2   | RTP配置列表          |
-| gameid                  | string  | 3   | 游戏ID             |
-| control\_time           | string  | 3   | 创建时间（ISO 8601格式） |
-| userid                  | string  | 3   | 运营商的玩家唯一标识       |
-| pid                     | integer | 3   | 玩家唯一标识           |
-| game\_name              | string  | 3   | 游戏名称             |
-| game\_rtp               | integer | 3   | 商户配置游戏RTP配置值     |
-| control\_rtp            | integer | 3   | 点控RTP配置值         |
-| controlling\_rtp        | integer | 3   | 当前玩家实际RTP值       |
-| person\_win\_max\_mult  | integer | 3   | 玩家最大赢分倍数         |
-| person\_win\_max\_score | integer | 3   | 玩家最大赢分           |
-| restrictions\_max\_rtp  | integer | 3   | 玩家终身最大RTP限制      |
-| experience              | integer | 3   | RTP类型/体验类型       |
-| rtp\_config\_off        | integer | 2   | RTP点控开关状态        |
-| count                   | integer | 2   | 总记录数             |
+| 参数名                               | 类型      | 描述               |
+| --------------------------------- | ------- | ---------------- |
+| code                              | integer | 状态码，0表示成功        |
+| error                             | string  | 错误信息，成功时为空       |
+| data                              | object  | 返回数据             |
+| data.list                         | array   | RTP配置列表          |
+| data.list.gameid                  | string  | 游戏ID             |
+| data.list.control\_time           | string  | 创建时间（ISO 8601格式） |
+| data.list.userid                  | string  | 运营商的玩家唯一标识       |
+| data.list.pid                     | integer | 玩家唯一标识           |
+| data.list.game\_name              | string  | 游戏名称             |
+| data.list.game\_rtp               | integer | 商户配置游戏RTP配置值     |
+| data.list.control\_rtp            | integer | 点控RTP配置值         |
+| data.list.controlling\_rtp        | integer | 当前玩家实际RTP值       |
+| data.list.person\_win\_max\_mult  | integer | 玩家最大赢分倍数         |
+| data.list.person\_win\_max\_score | integer | 玩家最大赢分           |
+| data.list.restrictions\_max\_rtp  | integer | 玩家终身最大RTP限制      |
+| data.list.experience              | integer | RTP类型/体验类型       |
+| rtp\_config\_off                  | integer | RTP点控开关状态        |
+| count                             | integer | 总记录数             |
 
 #### 返回示例
 
