@@ -12,26 +12,25 @@ icon: empty-set
 
 **2) 请求参数**
 
-| 参数名    | 类型         | 描述                                                                            |
-| ------ | ---------- | ----------------------------------------------------------------------------- |
-| uids   | \[]string  | 需要取消的玩家id列表                                                                   |
-| gameid | \[]string  | 取消控制RTP的游戏id，游戏id为`ALL`时取消的是设置rtp时的`ALL`                                      |
-| fromto | \[2]string | 输入一个长度为2的字符串数组来筛选该时间段创建的rtp数据 `["YYYY-MM-DD HH:mm:ss","YYYY-MM-DD HH:mm:ss"]` |
+| 参数名       | 类型     | 描述                                       |
+| --------- | ------ | ---------------------------------------- |
+| uids      | string | 需要取消的玩家id列表                              |
+| gameid    | string | 取消控制RTP的游戏id，游戏id为`ALL`时取消的是设置rtp时的`ALL` |
+| starttime | string | 起始时间(UTC时间戳)                             |
+| endtime   | string | 结束时间(UTC时间戳)                             |
 
 * 示例(单个玩家)：
 
 ```json
 {
-    "uids": [
-        "f-09261620"
-    ],
-    "fromto": [
-        "2025-10-09 00:00:00",
-        "2025-10-10 00:00:00"
-    ],
-    "gameid": [
-        "ALL"
-    ]
+    "userids": [
+        "f-09261620"
+    ],
+    "startTime": 1760581729494,
+    "endTime": 1760581729494,
+    "gameid": [
+        "ALL"
+    ]
 }
 ```
 
@@ -44,25 +43,22 @@ curl --location --request POST 'https://{APIURL}/api/v2/player/cancelRtp' \
 --header 'X-Appid;' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "pids": [],
-  "uids": [
+  "userids": [
     "f-09261620"
   ],
-  "fromto": [
-    "2025-10-09 00:00:00",
-    "2025-10-10 00:00:00"
-  ],
-  "gameid": [
-    "ALL"
+  "startTime": 1760581729494,
+    "endTime": 1760581729494,
+    "gameid": [
+        "ALL"
   ]
 }'
 ```
 
 **3) 返回结果**
 
-| 参数名       | 类型       | 描述        |
-| --------- | -------- | --------- |
-| pid\_list | \[]int64 | 用户的唯一标识列表 |
+| 参数名       | 类型    | 描述        |
+| --------- | ----- | --------- |
+| pid\_list | int64 | 用户的唯一标识列表 |
 
 * 示例：
 
