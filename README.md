@@ -1,6 +1,8 @@
-# HG API对接文档
+---
+icon: book
+---
 
-## HG API对接文档
+# HG API对接文档
 
 #### 概述 <a href="#gai-shu" id="gai-shu"></a>
 
