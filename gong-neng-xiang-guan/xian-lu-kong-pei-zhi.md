@@ -20,19 +20,19 @@ icon: objects-align-left
 
 #### **API 接口详情**
 
-**1. 添加线路配置**
+**1. 添加线路控配置**
 
 * UR&#x4C;**:** `POST /api/v2/line_provider_config/add`
 
 **请求参数 (Request Body)**
 
-| 名称              | 类型      | 必选  | 说明                                                                                                                                                                                                                         |
-| --------------- | ------- | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `win_max_multi` | integer | 是   | 最大赢取倍数。                                                                                                                                                                                                                    |
-| `win_max_score` | integer | 是   | 最大赢取分数。                                                                                                                                                                                                                    |
-| `rtp`           | integer | 是   | 设置线路玩家控制的RTP值，可填值`10, 20, 30, 40, 50, 60, 70, 80, 85, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 102, 105, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 220, 240, 260, 280, 300`注意，根据运营商权限不同，可能仅支持10-97或93-300的RTP值 |
-| `experience`    | integer | 是   | 体验类型：可填值`0,1,2, 3, 4,                                                                                                                                                                                                      |
-| `config_name`   | string  | 是   | 配置的名称。                                                                                                                                                                                                                     |
+| 名称              | 类型      | 必选 | 说明                                                                                                                                                                                                                         |
+| --------------- | ------- | -- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `win_max_multi` | integer | 是  | 最大赢取倍数。                                                                                                                                                                                                                    |
+| `win_max_score` | integer | 是  | 最大赢取分数。                                                                                                                                                                                                                    |
+| `rtp`           | integer | 是  | 设置线路玩家控制的RTP值，可填值`10, 20, 30, 40, 50, 60, 70, 80, 85, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 102, 105, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 220, 240, 260, 280, 300`注意，根据运营商权限不同，可能仅支持10-97或93-300的RTP值 |
+| `experience`    | integer | 是  | 体验类型：可填值\`0,1,2, 3, 4,                                                                                                                                                                                                     |
+| `config_name`   | string  | 是  | 配置的名称。                                                                                                                                                                                                                     |
 
 **请求示例**
 
@@ -65,18 +65,18 @@ curl --location --request POST 'https://{APIURL}/api/v2/line_provider_config/add
 
 **返回结果**
 
-| 参数名                                     | 类型      | 描述            |
-| --------------------------------------- | ------- | ------------- |
-| code                                    | integer | 返回状态码，0 表示成功  |
-| error                                   | string  | 错误信息，成功时为空字符串 |
-| data                                    | object  | 返回数据          |
-| data.line_provider_config               | string  | 线路控配置         |
-| data.line_provider_config.id            | integer | 线路控配置ID       |
-| data.line_provider_config.rtp           | integer | 线路控配置RTP      |
-| data.line_provider_config.win_max_multi | integer | 线路控配置最大赢钱倍数   |
-| data.line_provider_config.win_max_score | integer | 线路控配置最大赢钱数    |
-| data.line_provider_config.experience    | integer | 线路控配置数值体验类型   |
-| data.line_provider_config.config_name   | string  | 线路控配置名称       |
+| 参数名                                         | 类型      | 描述            |
+| ------------------------------------------- | ------- | ------------- |
+| code                                        | integer | 返回状态码，0 表示成功  |
+| error                                       | string  | 错误信息，成功时为空字符串 |
+| data                                        | object  | 返回数据          |
+| data.line\_provider\_config                 | string  | 线路控配置         |
+| data.line\_provider\_config.id              | integer | 线路控配置ID       |
+| data.line\_provider\_config.rtp             | integer | 线路控配置RTP      |
+| data.line\_provider\_config.win\_max\_multi | integer | 线路控配置最大赢钱倍数   |
+| data.line\_provider\_config.win\_max\_score | integer | 线路控配置最大赢钱数    |
+| data.line\_provider\_config.experience      | integer | 线路控配置数值体验类型   |
+| data.line\_provider\_config.config\_name    | string  | 线路控配置名称       |
 
 **成功返回示例**
 
@@ -105,9 +105,9 @@ curl --location --request POST 'https://{APIURL}/api/v2/line_provider_config/add
 
 **请求参数 (Request Body)**
 
-| 名称   | 类型      | 必选  | 说明        |
-| ---- | ------- | --- | --------- |
-| `id` | integer | 是   | 要删除的配置ID。 |
+| 名称   | 类型      | 必选 | 说明        |
+| ---- | ------- | -- | --------- |
+| `id` | integer | 是  | 要删除的配置ID。 |
 
 **请求示例**
 
@@ -150,10 +150,10 @@ curl --location --request POST 'https://{APIURL}/api/v2/line_provider_config/del
 
 **请求参数 (Request Body)**
 
-| 名称          | 类型      | 必选  | 说明           |
-| ----------- | ------- | --- | ------------ |
-| `page`      | integer | 是   | 页号，从 `1` 开始。 |
-| `page_size` | integer | 是   | 每页显示的条目数量。   |
+| 名称          | 类型      | 必选 | 说明           |
+| ----------- | ------- | -- | ------------ |
+| `page`      | integer | 是  | 页号，从 `1` 开始。 |
+| `page_size` | integer | 是  | 每页显示的条目数量。   |
 
 **请求示例**
 
@@ -180,18 +180,18 @@ curl --location --request POST 'https://{APIURL}/api/v2/line_provider_config/lis
 
 返回结果
 
-| 参数名                                     | 类型      | 描述            |
-| --------------------------------------- | ------- | ------------- |
-| code                                    | integer | 返回状态码，0 表示成功  |
-| error                                   | string  | 错误信息，成功时为空字符串 |
-| data                                    | object  | 返回数据          |
-| data.line_provider_config               | string  | 线路控配置         |
-| data.line_provider_config.id            | integer | 线路控配置ID       |
-| data.line_provider_config.rtp           | integer | 线路控配置RTP      |
-| data.line_provider_config.win_max_multi | integer | 线路控配置最大赢钱倍数   |
-| data.line_provider_config.win_max_score | integer | 线路控配置最大赢钱数    |
-| data.line_provider_config.experience    | integer | 线路控配置数值体验类型   |
-| data.line_provider_config.config_name   | string  | 线路控配置名称       |
+| 参数名                                         | 类型      | 描述            |
+| ------------------------------------------- | ------- | ------------- |
+| code                                        | integer | 返回状态码，0 表示成功  |
+| error                                       | string  | 错误信息，成功时为空字符串 |
+| data                                        | object  | 返回数据          |
+| data.line\_provider\_config                 | string  | 线路控配置         |
+| data.line\_provider\_config.id              | integer | 线路控配置ID       |
+| data.line\_provider\_config.rtp             | integer | 线路控配置RTP      |
+| data.line\_provider\_config.win\_max\_multi | integer | 线路控配置最大赢钱倍数   |
+| data.line\_provider\_config.win\_max\_score | integer | 线路控配置最大赢钱数    |
+| data.line\_provider\_config.experience      | integer | 线路控配置数值体验类型   |
+| data.line\_provider\_config.config\_name    | string  | 线路控配置名称       |
 
 **成功返回示例**
 
