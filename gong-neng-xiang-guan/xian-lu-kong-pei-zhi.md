@@ -99,7 +99,7 @@ curl --location --request POST 'https://{APIURL}/api/v2/line_provider_config/add
 
 ***
 
-**2. 删除线路配置**
+**2. 删除线路控配置**
 
 * UR&#x4C;**:** `POST /api/v2/line_provider_config/del`
 
@@ -144,7 +144,7 @@ curl --location --request POST 'https://{APIURL}/api/v2/line_provider_config/del
 
 ***
 
-**3. 获取所有线路配置**
+**3. 获取所有线路控配置**
 
 * UR&#x4C;**:** `POST /api/v2/line_provider_config/list`
 
