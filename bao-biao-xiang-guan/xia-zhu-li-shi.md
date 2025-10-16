@@ -6,7 +6,7 @@ icon: file-waveform
 
 #### 拉取下注历史 <a href="#h3-u62c9u53d6u4e0bu6ce8u5386u53f2" id="h3-u62c9u53d6u4e0bu6ce8u5386u53f2"></a>
 
-注意：仅支持查询60天内的数据。
+注意：仅支持查询60天内的数据。基于性能考量一次性查询条数<mark style="color:red;">最大为10000</mark>，且每分钟<mark style="color:red;">最多拉取60次</mark>。
 
 **1) 请求地址**
 
