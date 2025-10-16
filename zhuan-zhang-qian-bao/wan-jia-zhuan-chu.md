@@ -15,7 +15,7 @@ icon: coin-blank
 | 参数名     | 类型            | 描述         |
 | ------- | ------------- | ---------- |
 | userid  | string\[4-40] | 运营商的玩家唯一标识 |
-| amount  | float         | 转入金额 >0    |
+| amount  | float         | 转出金额 >0    |
 | traceid | string\[4-40] | 交易单号       |
 
 *   示例：
