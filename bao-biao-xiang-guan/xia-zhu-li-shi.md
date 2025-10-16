@@ -74,7 +74,7 @@ curl --location --request POST 'https://{APIURL}/api/v1/record/getbetlogs' \
 | insert\_time | datetime      | 记录入库的时间          |
 | appid        | string        | 运营商ID            |
 | balance      | float         | 结算后余额            |
-| grade        | int           | 投注挡位             |
+| grade        | int           | 投注档位             |
 | completed    | boolean       | 本轮游戏是否完成         |
 | roundid      | string        | 回合ID, 同一局游戏该字段相同 |
 
