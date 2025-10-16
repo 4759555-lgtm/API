@@ -12,12 +12,10 @@ icon: empty-set
 
 **2) 请求参数**
 
-| 参数名       | 类型     | 描述                                       |
-| --------- | ------ | ---------------------------------------- |
-| uids      | string | 需要取消的玩家id列表                              |
-| gameid    | string | 取消控制RTP的游戏id，游戏id为`ALL`时取消的是设置rtp时的`ALL` |
-| starttime | string | 起始时间(UTC时间戳)                             |
-| endtime   | string | 结束时间(UTC时间戳)                             |
+| 参数名    | 类型     | 描述                                                                                                                             |
+| ------ | ------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| uids   | string | 需要取消的玩家id列表                                                                                                                    |
+| gameid | string | <p>取消控制RTP的游戏id，当游戏 ID 设置为 <code>ALL</code> 时，表示取消对所有游戏的 RTP 控制。<br>注意：若配置针对特定游戏 ID，使用 <code>ALL</code> 不会取消该特定游戏的 RTP 控制。</p> |
 
 * 示例(单个玩家)：
 
@@ -26,8 +24,6 @@ icon: empty-set
     "userids": [
         "f-09261620"
     ],
-    "startTime": 1760581729494,
-    "endTime": 1760581729494,
     "gameid": [
         "ALL"
     ]
@@ -46,8 +42,6 @@ curl --location --request POST 'https://{APIURL}/api/v2/player/cancelRtp' \
   "userids": [
     "f-09261620"
   ],
-  "startTime": 1760581729494,
-    "endTime": 1760581729494,
     "gameid": [
         "ALL"
   ]
