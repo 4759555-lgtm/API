@@ -18,13 +18,13 @@ icon: list-ol
 | ------- | ------------- | ---- |
 | traceid | string\[4-40] | 交易单号 |
 
-* 示例：
-  
-  ```json
-  {
-  "traceid": "fdsafaagg1234"
-  }
-  ```
+*   示例：
+
+    ```json
+    {
+    "traceid": "fdsafaagg1234"
+    }
+    ```
 
 **请求示例代码**
 
@@ -55,62 +55,58 @@ curl --location --request POST 'https://{APIURL}/api/v1/transaction/queryOrder' 
 | data.completed    | bool     | 订单是否执行完成, 如果是false, 请稍等再重新使用此接口检查 |
 
 * 正常成功的订单
+*   示例：
 
-* 示例：
-  
-  ```json
-  {
-      "code": 0,
-      "error": "",
-      "data": {
-          "order": {
-              "id": "d3djos0db2suqrs2ko90",
-              "appid": "qwe456_USD_1",
-              "traceid": "abc-def-gh",
-              "create_time": 1759198319907,
-              "pid": 173966,
-              "userid": "aaa",
-              "amount": 123.45,
-              "action": "in",
-              "error": "",
-              "completed": true
-          }
-      }
-  }
-  ```
-
-* 订单存在但是转账失败
-
-* 示例：
-  
-  ```json
-  {
-  "code": 1000,
-  "error": "error",
-  "data": {
-    "order": {
-      "id": "d3djos0db2suqrs2ko90",
-      "traceid": "fdsafaagg1234",
-      "create_time": "2023-12-07T10:55:42.15+08:00",
-      "pid": 100065,
-      "userid": "uuserid,
-      "appid": "faketrans",
-      "amount": 123.45,
-      "action": "outall",
-      "error": "some internal error occur",
-      "completed": true
+    ```json
+    {
+        "code": 0,
+        "error": "",
+        "data": {
+            "order": {
+                "id": "d3djos0db2suqrs2ko90",
+                "appid": "qwe456_USD_1",
+                "traceid": "abc-def-gh",
+                "create_time": 1759198319907,
+                "pid": 173966,
+                "userid": "aaa",
+                "amount": 123.45,
+                "action": "in",
+                "error": "",
+                "completed": true
+            }
+        }
     }
-   }
-  }
-  ```
+    ```
+* 订单存在但是转账失败
+*   示例：
 
+    ```json
+    {
+    "code": 1000,
+    "error": "error",
+    "data": {
+      "order": {
+        "id": "d3djos0db2suqrs2ko90",
+        "traceid": "fdsafaagg1234",
+        "create_time": "2023-12-07T10:55:42.15+08:00",
+        "pid": 100065,
+        "userid": "uuserid,
+        "appid": "faketrans",
+        "amount": 123.45,
+        "action": "outall",
+        "error": "some internal error occur",
+        "completed": true
+      }
+     }
+    }
+    ```
 * 订单不存在
+*   示例：
 
-* 示例：
-  
-  ```json
-  {
-  "code": 1000,
-  "error": "Order does not exist"
-  }
-  ```
+    ```json
+    {
+        "code": 1,
+        "error": "sql: no rows in result set",
+        "data": null
+    }
+    ```
