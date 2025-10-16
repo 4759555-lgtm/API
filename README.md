@@ -53,7 +53,7 @@ $$
 | **Content-Type**      | `application/json; charset=utf-8`      |
 | **X-Appid**           | `qwe456_USD_1`                         |
 | **X-Request-Id**      | `1760060260227_224451`                 |
-| **签名密钥 Key**          | `970cb4e4-9ed3-4fc0-802c-8dbedb8b5e85` |
+| **商户编码**              | `970cb4e4-9ed3-4fc0-802c-8dbedb8b5e85` |
 | **请求 Body (原始 JSON)** | `{"language":"en"}`                    |
 | **期望 X-Sign**         | `cdb2ea5d7b5186cff285b6f9607a02ce`     |
 
