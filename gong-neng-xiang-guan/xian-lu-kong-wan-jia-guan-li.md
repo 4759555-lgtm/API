@@ -34,7 +34,7 @@ icon: objects-align-center-vertical
 curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/add' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "group_id": 100002,
+  "groupid": 100002,
   "userids": ["test_web", "test_web1"]
 }'
 ```
@@ -206,17 +206,17 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/del' 
 
 #### 2) 请求参数
 
-| 参数名       | 类型      | 必填 | 描述             |
-| --------- | ------- | -- | -------------- |
-| group\_id | integer | 是  | 组ID            |
-| userid    | integer | 是  | 玩家昵称，运营商玩家唯一标识 |
-| app\_id   | string  | 是  | 商户ID           |
+| 参数名     | 类型      | 必填 | 描述             |
+| ------- | ------- | -- | -------------- |
+| groupid | integer | 是  | 组ID            |
+| userid  | integer | 是  | 玩家昵称，运营商玩家唯一标识 |
+| app\_id | string  | 是  | 商户ID           |
 
 示例：
 
 ```json
 {
-  "group_id": 100003,
+  "groupid": 100003,
   "userid": "su998",
   "app_id": "qwe456_USD_2"
 }
@@ -228,7 +228,7 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/del' 
 curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/update' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "group_id": 100003,
+  "groupid": 100003,
   "userid": 107998,
   "app_id": "qwe456_USD_2"
 }'
