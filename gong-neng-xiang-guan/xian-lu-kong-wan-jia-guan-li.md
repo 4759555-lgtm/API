@@ -72,7 +72,7 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/add' 
 | 参数名        | 类型      | 必填 | 描述        |
 | ---------- | ------- | -- | --------- |
 | userid     | string  | 否  | 运营商玩家唯一标识 |
-| group\_id  | integer | 否  | 组ID       |
+| groupid    | integer | 否  | 组ID       |
 | page       | integer | 是  | 页码，从1开始   |
 | page\_size | integer | 是  | 每页大小      |
 
@@ -81,7 +81,7 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/add' 
 ```json
 {
   "userid": "su998",
-  "group_id": 0,
+  "groupid": 0,
   "page": 1,
   "page_size": 20
 }
@@ -115,7 +115,7 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/page'
 | total       | integer | 总记录数      |
 | record      | array   | 玩家记录列表    |
 | id          | integer | 记录ID      |
-| group\_id   | integer | 组ID       |
+| groupid     | integer | 组ID       |
 | group\_name | string  | 组名称       |
 | app\_id     | string  | 商户ID      |
 | userid      | integer | 玩家ID      |
@@ -134,7 +134,7 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/page'
     "record": [
       {
         "id": 100001,
-        "group_id": 100002,
+        "groupid": 100002,
         "group_name": "bb",
         "app_id": "qwe456_USD_2",
         "userid": "su998"
