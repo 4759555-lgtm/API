@@ -12,17 +12,17 @@ icon: sack-dollar
 
 **2) 请求参数:**
 
-| 参数名    | 类型            | 描述         |
-| ------ | ------------- | ---------- |
-| userid | string\[4-40] | 运营商的玩家唯一标识 |
+| 参数名    | 类型            | 必填 | 描述         |
+| ------ | ------------- | -- | ---------- |
+| userid | string\[4-40] | 是  | 运营商的玩家唯一标识 |
 
-* 示例：
-  
-  ```json
-  {
-  "userid": "testuser1",
-  }
-  ```
+*   示例：
+
+    ```json
+    {
+    "userid": "testuser1",
+    }
+    ```
 
 **请求示例代码**
 
@@ -46,19 +46,16 @@ curl --location --request POST 'https://{APIURL}/api/v1/player/balance' \
 | data         | object  | 返回数据          |
 | data.balance | float   | 玩家当前可用余额      |
 
-
-
 * 玩家余额 43.45
+*   示例：
 
-* 示例：
-  
-  ```json
-  {
-  "code": 0,
-  "error": "",
-  "data": {
-    "balance": 43.45,
+    ```json
+    {
+    "code": 0,
+    "error": "",
+    "data": {
+      "balance": 43.45,
+      }
+     }
     }
-   }
-  }
-  ```
+    ```
