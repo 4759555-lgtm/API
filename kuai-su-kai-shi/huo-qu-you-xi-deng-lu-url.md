@@ -12,21 +12,21 @@ icon: joystick
 
 **2) 请求参数:**
 
-| 参数名      | 类型            | 必选  | 描述            |
-| -------- | ------------- | --- | ------------- |
-| userid   | string\[4-40] | 是   | 运营商玩家唯一标识     |
-| gameid   | string        | 是   | 游戏 ID         |
-| language | string        | 是   | 语言设定 th, en … |
+| 参数名      | 类型            | 必选 | 描述            |
+| -------- | ------------- | -- | ------------- |
+| userid   | string\[4-40] | 是  | 运营商的玩家ID      |
+| gameid   | string        | 是  | 游戏 ID         |
+| language | string        | 是  | 语言设定 th, en … |
 
-* 示例：
-  
-  ```json
-  {
-      "userid": "abc",
-      "gameid": "pg_98",
-      "language": "th"
-  }
-  ```
+*   示例：
+
+    ```json
+    {
+        "userid": "abc",
+        "gameid": "pg_98",
+        "language": "th"
+    }
+    ```
 
 请求示例代码：
 

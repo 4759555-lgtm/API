@@ -16,8 +16,8 @@ icon: book-quran
 
 | 参数名      | 类型     | 必填 | 描述                                                                                                                 |
 | -------- | ------ | -- | ------------------------------------------------------------------------------------------------------------------ |
-| userid   | string | 是  | 运营商的玩家唯一标识                                                                                                         |
-| gameid   | string | 是  | <p>被控制RTP的游戏ID<br><strong>注意</strong>: 填写<code>ALL</code>时查询全部游戏</p>                                               |
+| userid   | string | 是  | 运营商的玩家ID                                                                                                           |
+| gameid   | string | 否  | <p>【非必填】被控制RTP的游戏ID<br><strong>注意</strong>: 不填时查询所有游戏。</p>                                                         |
 | page     | int64  | 是  | 页码，从1开始                                                                                                            |
 | pagesize | int64  | 是  | 每页大小，最大500                                                                                                         |
 | status   | int    | 是  | <p>点控状态：<br><strong>-1</strong>: 查询全部状态的点控记录<br><strong>0</strong>: 已失效状态的点控记录<br><strong>1</strong>: 生效中的点控记录</p> |
@@ -63,16 +63,16 @@ curl --location --request POST '{APIURL}/api/v2/player/getRtpList' \
 | data.list                         | array   | RTP配置列表          |
 | data.list.gameid                  | string  | 游戏ID             |
 | data.list.control\_time           | string  | 创建时间（ISO 8601格式） |
-| data.list.userid                  | string  | 运营商的玩家唯一标识       |
-| data.list.pid                     | integer | 玩家唯一标识           |
+| data.list.userid                  | string  | 运营商的玩家ID         |
+| data.list.pid                     | integer | 平台唯一ID           |
 | data.list.game\_name              | string  | 游戏名称             |
-| data.list.game\_rtp               | integer | 商户配置游戏RTP配置值     |
+| data.list.game\_rtp               | integer | 商户配置的游戏RTP配置值    |
 | data.list.control\_rtp            | integer | 点控RTP配置值         |
 | data.list.controlling\_rtp        | integer | 当前玩家实际RTP值       |
-| data.list.person\_win\_max\_mult  | integer | 玩家最大赢分倍数         |
-| data.list.person\_win\_max\_score | integer | 玩家最大赢分           |
-| data.list.restrictions\_max\_rtp  | integer | 玩家终身最大RTP限制      |
-| data.list.experience              | integer | RTP类型/体验类型       |
+| data.list.person\_win\_max\_mult  | integer | 单局最大赢钱倍数限制       |
+| data.list.person\_win\_max\_score | integer | 单局最大赢钱数          |
+| data.list.restrictions\_max\_rtp  | integer | RTP上限设置          |
+| data.list.experience              | integer | RTP类型            |
 | rtp\_config\_off                  | integer | RTP点控开关状态        |
 | count                             | integer | 总记录数             |
 

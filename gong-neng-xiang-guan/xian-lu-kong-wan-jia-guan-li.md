@@ -17,7 +17,7 @@ icon: objects-align-center-vertical
 | 参数名     | 类型             | 必填 | 描述       |
 | ------- | -------------- | -- | -------- |
 | groupid | integer        | 是  | 组ID      |
-| userids | array\[string] | 是  | 玩家唯一ID列表 |
+| userids | array\[string] | 是  | 运营商的玩家ID |
 
 示例：
 
@@ -69,12 +69,12 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/add' 
 
 #### 2) 请求参数
 
-| 参数名        | 类型      | 必填 | 描述        |
-| ---------- | ------- | -- | --------- |
-| userid     | string  | 否  | 运营商玩家唯一标识 |
-| groupid    | integer | 否  | 组ID       |
-| page       | integer | 是  | 页码，从1开始   |
-| page\_size | integer | 是  | 每页大小      |
+| 参数名        | 类型      | 必填 | 描述       |
+| ---------- | ------- | -- | -------- |
+| userid     | string  | 否  | 运营商的玩家ID |
+| groupid    | integer | 否  | 组ID      |
+| page       | integer | 是  | 页码，从1开始  |
+| page\_size | integer | 是  | 每页大小     |
 
 示例：
 
@@ -117,8 +117,8 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/page'
 | id          | integer | 记录ID      |
 | groupid     | integer | 组ID       |
 | group\_name | string  | 组名称       |
-| app\_id     | string  | 商户ID      |
-| userid      | integer | 玩家ID      |
+| appid       | string  | 商户ID      |
+| userid      | integer | 运营商的玩家ID  |
 
 示例：
 
@@ -136,7 +136,7 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/page'
         "id": 100001,
         "groupid": 100002,
         "group_name": "bb",
-        "app_id": "qwe456_USD_2",
+        "appid": "qwe456_USD_2",
         "userid": "su998"
       }
     ]
@@ -154,9 +154,9 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/page'
 
 #### 2) 请求参数
 
-| 参数名     | 类型      | 必填 | 描述             |
-| ------- | ------- | -- | -------------- |
-| userids | integer | 是  | 玩家昵称，运营商玩家唯一标识 |
+| 参数名     | 类型      | 必填 | 描述       |
+| ------- | ------- | -- | -------- |
+| userids | integer | 是  | 运营商的玩家ID |
 
 示例：
 
@@ -206,11 +206,11 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/del' 
 
 #### 2) 请求参数
 
-| 参数名     | 类型      | 必填 | 描述             |
-| ------- | ------- | -- | -------------- |
-| groupid | integer | 是  | 组ID            |
-| userid  | integer | 是  | 玩家昵称，运营商玩家唯一标识 |
-| app\_id | string  | 是  | 商户ID           |
+| 参数名     | 类型      | 必填 | 描述       |
+| ------- | ------- | -- | -------- |
+| groupid | integer | 是  | 组ID      |
+| userid  | integer | 是  | 运营商的玩家ID |
+| appid   | string  | 是  | 商户ID     |
 
 示例：
 
@@ -218,7 +218,7 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/del' 
 {
   "groupid": 100003,
   "userid": "su998",
-  "app_id": "qwe456_USD_2"
+  "appid": "qwe456_USD_2"
 }
 ```
 
@@ -230,7 +230,7 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/updat
 --data-raw '{
   "groupid": 100003,
   "userid": 107998,
-  "app_id": "qwe456_USD_2"
+  "appid": "qwe456_USD_2"
 }'
 ```
 

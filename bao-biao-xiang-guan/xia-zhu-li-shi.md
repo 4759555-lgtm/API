@@ -8,6 +8,8 @@ icon: file-waveform
 
 注意：仅支持查询60天内的数据。基于性能考量一次性查询条数<mark style="color:red;">最大为10000</mark>，且每分钟<mark style="color:red;">最多拉取60次</mark>。
 
+查询起始/结束时间注意使用<mark style="color:red;">UTC毫秒级时间戳</mark>。
+
 **1) 请求地址**
 
 > URL: {APIURL}/api/v1/record/getbetlogs
@@ -16,10 +18,10 @@ icon: file-waveform
 
 | 参数        | 类型     | 必填 | 说明                                                                |
 | --------- | ------ | -- | ----------------------------------------------------------------- |
-| userid    | string | 是  | 运营商的玩家唯一标识（可不填，不填查询所有玩家）                                          |
+| userid    | string | 是  | 运营商的玩家ID（可不填，不填查询所有玩家）                                            |
 | gameid    | string | 是  | 游戏ID（可不填，不填查询所有游戏）                                                |
-| starttime | Int    | 是  | 查询起始时间(UTC时间戳)                                                    |
-| endtime   | Int    | 是  | 查询结束时间(UTC时间戳)                                                    |
+| starttime | Int    | 是  | 查询起始时间(UTC时间戳，毫秒级)                                                |
+| endtime   | Int    | 是  | 查询结束时间(UTC时间戳，毫秒级)                                                |
 | page      | Int    | 是  | 当前页                                                               |
 | pagesize  | Int    | 是  | 查询条数。注意：单次查询最多不能超过10000条                                          |
 | sort      | Bool   | 是  | <p>排序方式，非必填项，不填为默认值false，返回结果按时间降序排序。<br>当值为true时，返回结果按时间升序排序</p> |
@@ -30,8 +32,8 @@ icon: file-waveform
     {
       "userid": "111",
       "gameid": "pg_98",
-      "starttime": 1730390400,
-      "endtime": 1734969599,
+      "starttime": 1761091200000,
+      "endtime": 1761174000000,
       "pagesize": 20,
       "page": 1,
       "sort":true
@@ -49,8 +51,8 @@ curl --location --request POST 'https://{APIURL}/api/v1/record/getbetlogs' \
 --data-raw '{
     "userid": "string",
     "gameid": "string",
-    "starttime": 1730390400,
-    "endtime": 1734969599,
+    "starttime": 1761091200000,
+    "endtime": 1761174000000,
     "pagesize": 20,
     "page": 1,
     "sort": true
@@ -64,9 +66,9 @@ curl --location --request POST 'https://{APIURL}/api/v1/record/getbetlogs' \
 
 | 参数名          | 类型            | 描述               |
 | ------------ | ------------- | ---------------- |
-| id           | string        | 记录的唯一ID          |
-| pid          | int64         | 平台玩家ID           |
-| userid       | string\[4-40] | 运营商的玩家唯一标识       |
+| id           | string        | 平台交易订单号          |
+| pid          | int64         | 平台唯一ID           |
+| userid       | string\[4-40] | 运营商的玩家ID         |
 | gameid       | string        | 游戏ID             |
 | bet          | float         | 下注总额             |
 | win          | float         | 赢分总额             |

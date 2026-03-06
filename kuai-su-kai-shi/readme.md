@@ -20,7 +20,7 @@ icon: calendar-check
 3. 运营商登录后台获取以下信息：
    * `{APIURL}`：接口地址
    * `AppID`：商户号（商户名称）
-   * `AppSecret`：商户编码
+   * `AppSecret`：密钥
 
 ***
 
@@ -32,14 +32,14 @@ icon: calendar-check
 | -------------- | ------ | -- | ------ | --------------------- |
 | `X-Sign`       | header | 是  | string | 签名算法见 签名算法及示例         |
 | `X-Request-Id` | header | 是  | string | 唯一，建议格式：UTC时间戳\_6位随机码 |
-| `X-Appid`      | header | 是  | string | 商户号                   |
+| `X-Appid`      | header | 是  | string | 商户号（商户名称）             |
 
 ### 签名算法及示例
 
 **签名算法规则：**
 
 $$
-\text{sign} = \text{MD5}(\text{X-Request-Id} + \text{body 中的原始 JSON 字符串} + \text{签名密钥 key})
+\text{sign} = \text{MD5}(\text{X-Request-Id} + \text{body 中的原始 JSON 字符串} + \text{密钥 key})
 $$
 
 **注意：** 这里的 body 中的 JSON 字符串必须是请求中最原始的 body 中的字符，不能使用 JSON 包转出来之后的字符。最终签名必须使用小写输出。
@@ -53,7 +53,7 @@ $$
 | **Content-Type**      | `application/json; charset=utf-8`      |
 | **X-Appid**           | `qwe456_USD_1`                         |
 | **X-Request-Id**      | `1760060260227_224451`                 |
-| **商户编码**              | `970cb4e4-9ed3-4fc0-802c-8dbedb8b5e85` |
+| **秘钥**                | `970cb4e4-9ed3-4fc0-802c-8dbedb8b5e85` |
 | **请求 Body (原始 JSON)** | `{"language":"en"}`                    |
 | **期望 X-Sign**         | `cdb2ea5d7b5186cff285b6f9607a02ce`     |
 
@@ -114,7 +114,7 @@ $$
 | 0    | 成功                    |
 | 1001 | 运营商被禁用                |
 | 1002 | 无效的商户ID               |
-| 1003 | 线路商被禁用                |
+| 1003 | 代理或多币种商户被禁用           |
 | 1004 | 游戏未找到                 |
 | 1005 | 该游戏正在进行维护             |
 | 1006 | 该游戏已关闭                |
@@ -123,7 +123,7 @@ $$
 | 1009 | 无效的钱包类型               |
 | 1011 | 无效的商户编码               |
 | 1012 | 您所在的国家或地区受到限制         |
-| 1013 | 线路商不允许调用接口            |
+| 1013 | 代理或多币种商户不允许调用接口       |
 | 1014 | IP不允许访问               |
 | 1015 | 错误的RTP赋值              |
 | 1016 | 错误的转账金额               |

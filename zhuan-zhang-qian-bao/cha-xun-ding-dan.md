@@ -41,18 +41,7 @@ curl --location --request POST 'https://{APIURL}/api/v1/transaction/queryOrder' 
 
 **3) 返回结果:**
 
-| 参数名               | 类型       | 描述                                |
-| ----------------- | -------- | --------------------------------- |
-| data.id           | string   | 平台内部唯一ID                          |
-| data.traceid      | string   | 交易单号                              |
-| data.create\_time | datetime | 订单创建时间                            |
-| data.pid          | int64    | 平台内部玩家id                          |
-| data.userid       | string   | 玩家id                              |
-| data.appid        | string   | 运营商标识                             |
-| data.amount       | float    | 转入/转出总额                           |
-| data.action       | string   | in,out,allout 转入,转出,全部转出          |
-| data.error        | string   | 订单执行的错误信息, 如果是”” 表示成功             |
-| data.completed    | bool     | 订单是否执行完成, 如果是false, 请稍等再重新使用此接口检查 |
+<table><thead><tr><th width="249">参数名</th><th>类型</th><th>描述</th></tr></thead><tbody><tr><td>data.id</td><td>string</td><td>平台交易订单号</td></tr><tr><td>data.traceid</td><td>string</td><td>交易单号</td></tr><tr><td>data.create_time</td><td>datetime</td><td>订单创建时间，毫秒级时间戳</td></tr><tr><td>data.pid</td><td>int64</td><td>平台唯一ID</td></tr><tr><td>data.userid</td><td>string</td><td>运营商的玩家ID</td></tr><tr><td>data.appid</td><td>string</td><td>商户appid</td></tr><tr><td>data.amount</td><td>float</td><td>转入/转出总额</td></tr><tr><td>data.action</td><td>string</td><td>in,out,allout 转入,转出,全部转出</td></tr><tr><td>data.error</td><td>string</td><td>订单执行的错误信息, 如果是”” 表示成功</td></tr><tr><td>data.completed</td><td>bool</td><td>订单是否执行完成, 如果是false, 请稍等再重新使用此接口检查</td></tr></tbody></table>
 
 * 正常成功的订单
 *   示例：
@@ -82,22 +71,9 @@ curl --location --request POST 'https://{APIURL}/api/v1/transaction/queryOrder' 
 
     ```json
     {
-    "code": 1000,
-    "error": "error",
-    "data": {
-      "order": {
-        "id": "d3djos0db2suqrs2ko90",
-        "traceid": "fdsafaagg1234",
-        "create_time": "2023-12-07T10:55:42.15+08:00",
-        "pid": 100065,
-        "userid": "uuserid,
-        "appid": "faketrans",
-        "amount": 123.45,
-        "action": "outall",
-        "error": "some internal error occur",
-        "completed": true
-      }
-     }
+        "code": 1,
+        "error": "Order already exists1",
+        "data": null
     }
     ```
 * 订单不存在

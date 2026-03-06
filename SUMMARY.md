@@ -4,7 +4,7 @@
 
 ## 快速开始
 
-* [公共说明和错误码](kuai-su-kai-shi/readme-1.md)
+* [公共说明和错误码](kuai-su-kai-shi/readme.md)
 * [游戏列表和支持语言](kuai-su-kai-shi/you-xi-lie-biao-he-zhi-chi-yu-yan.md)
 * [货币列表](kuai-su-kai-shi/huo-bi-lie-biao.md)
 * [创建玩家帐号](kuai-su-kai-shi/chuang-jian-wan-jia-zhang-hao.md)
@@ -16,6 +16,7 @@
 * [运营商提供API](dan-yi-qian-bao/yun-ying-shang-ti-gong-api.md)
 * [获取玩家余额](dan-yi-qian-bao/huo-qu-wan-jia-yu-e.md)
 * [修改玩家余额](dan-yi-qian-bao/xiu-gai-wan-jia-yu-e.md)
+* [特殊逻辑说明](dan-yi-qian-bao/te-shu-luo-ji-shuo-ming.md)
 
 ## 转账钱包
 
@@ -39,3 +40,6 @@
 * [线路控配置](gong-neng-xiang-guan/xian-lu-kong-pei-zhi.md)
 * [线路控分组](gong-neng-xiang-guan/xian-lu-kong-fen-zu.md)
 * [线路控玩家管理](gong-neng-xiang-guan/xian-lu-kong-wan-jia-guan-li.md)
+* [养客全局配置](gong-neng-xiang-guan/yang-ke-quan-ju-pei-zhi.md)
+* [养客个人配置](gong-neng-xiang-guan/yang-ke-ge-ren-pei-zhi.md)
+* [养客控制历史](gong-neng-xiang-guan/yang-ke-kong-zhi-li-shi.md)
