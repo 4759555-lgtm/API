@@ -157,10 +157,10 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/update' \
 
 #### 2) 请求参数
 
-| 参数名        | 类型      | 必填 | 描述      |
-| ---------- | ------- | -- | ------- |
-| page       | integer | 是  | 页码，从1开始 |
-| page\_size | integer | 是  | 每页大小    |
+| 参数名      | 类型      | 必填 | 描述      |
+| -------- | ------- | -- | ------- |
+| page     | integer | 是  | 页码，从1开始 |
+| pagesize | integer | 是  | 每页大小    |
 
 示例：
 
