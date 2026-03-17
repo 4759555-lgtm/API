@@ -167,7 +167,7 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/update' \
 ```json
 {
   "page": 1,
-  "page_size": 20
+  "pagesize": 20
 }
 ```
 
@@ -178,7 +178,7 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/list' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "page": 1,
-  "page_size": 20
+  "pagesize": 20
 }'
 ```
 
