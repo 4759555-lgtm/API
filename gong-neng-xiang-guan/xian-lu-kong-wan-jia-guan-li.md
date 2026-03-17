@@ -69,12 +69,12 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/add' 
 
 #### 2) 请求参数
 
-| 参数名        | 类型      | 必填 | 描述       |
-| ---------- | ------- | -- | -------- |
-| userid     | string  | 否  | 运营商的玩家ID |
-| groupid    | integer | 否  | 组ID      |
-| page       | integer | 是  | 页码，从1开始  |
-| page\_size | integer | 是  | 每页大小     |
+| 参数名      | 类型      | 必填 | 描述       |
+| -------- | ------- | -- | -------- |
+| userid   | string  | 否  | 运营商的玩家ID |
+| groupid  | integer | 否  | 组ID      |
+| page     | integer | 是  | 页码，从1开始  |
+| pagesize | integer | 是  | 每页大小     |
 
 示例：
 
@@ -83,7 +83,7 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/add' 
   "userid": "su998",
   "groupid": 0,
   "page": 1,
-  "page_size": 20
+  "pagesize": 20
 }
 ```
 
@@ -96,7 +96,7 @@ curl --location --request POST '{APIURL}/api/v2/line-provider-group/player/page'
   "userid": 107998,
   "appid": "qwe456_USD_1",
   "page": 1,
-  "page_size": 20
+  "pagesize": 20
 }'
 ```
 
