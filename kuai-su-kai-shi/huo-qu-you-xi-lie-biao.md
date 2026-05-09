@@ -39,7 +39,7 @@ curl --location --request POST 'https://{APIURL}/api/v1/game/list' \
 
 **3) 返回结果**
 
-<table><thead><tr><th width="184">参数名</th><th width="176">类型</th><th>描述</th></tr></thead><tbody><tr><td>id</td><td>string</td><td>游戏ID</td></tr><tr><td>name</td><td>string</td><td>游戏名字</td></tr><tr><td>type</td><td>int</td><td>0: 拉霸游戏、电子游戏, 1: Mini游戏, 2: 视讯游戏,3: 捕鱼游戏, 4: 彩票游戏 （2,3,4后续更新开启）</td></tr><tr><td>icon_url</td><td>string</td><td>游戏icon</td></tr><tr><td>manufacturer</td><td>string</td><td>游戏厂商</td></tr><tr><td>portrait_icon_url</td><td>string</td><td>游戏icon(竖版)</td></tr></tbody></table>
+<table><thead><tr><th width="184">参数名</th><th width="176">类型</th><th>描述</th></tr></thead><tbody><tr><td>id</td><td>string</td><td>游戏ID</td></tr><tr><td>name</td><td>string</td><td>游戏名字</td></tr><tr><td>type</td><td>int</td><td>0: 拉霸游戏、电子游戏, 1: Mini游戏, 2: 视讯游戏,3: 捕鱼游戏, 4: 彩票游戏 （4后续更新开启）</td></tr><tr><td>icon_url</td><td>string</td><td>游戏icon</td></tr><tr><td>manufacturer</td><td>string</td><td>游戏厂商</td></tr><tr><td>portrait_icon_url</td><td>string</td><td>游戏icon(竖版)</td></tr></tbody></table>
 
 *   示例：
 
