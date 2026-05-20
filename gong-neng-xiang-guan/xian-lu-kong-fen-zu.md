@@ -38,7 +38,7 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/add' \
 --data-raw '{
   "is_control_rtp": 1,
   "groups_name": "aa",
-  "config_id": 100003
+  "configid": 100003
 }'
 ```
 
@@ -68,7 +68,7 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/add' \
       "id": 100001,
       "is_control_rtp": 1,
       "groups_name": "aa",
-      "config_id": 100003
+      "configid": 100003
     }
   }
 }
@@ -98,7 +98,7 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/add' \
   "id": 100001,
   "is_control_rtp": 1,
   "groups_name": "bb",
-  "config_id": 100005
+  "configid": 100005
 }
 ```
 
@@ -111,7 +111,7 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/update' \
   "id": 100001,
   "is_control_rtp": 1,
   "groups_name": "bb",
-  "config_id": 100005
+  "configid": 100005
 }'
 ```
 
@@ -141,7 +141,7 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/update' \
       "id": 100001,
       "is_control_rtp": 2,
       "groups_name": "bb",
-      "config_id": 100003
+      "configid": 100003
     }
   }
 }
@@ -224,7 +224,7 @@ curl --location --request POST '{APIURL}/api/v2/line_provider_groups/list' \
         "is_control_rtp": 1,
         "appid": "qwe456_USD_2",
         "groups_name": "bb",
-        "config_id": 100003
+        "configid": 100003
       }
     ]
   }
