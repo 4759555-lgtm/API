@@ -35,7 +35,7 @@
 * [RTP控制功能](gong-neng-xiang-guan/rtp-kong-zhi-gong-neng.md)
 * [商户RTP调控](gong-neng-xiang-guan/shang-hu-rtp-tiao-kong.md)
 * [调整个人slots游戏RTP](gong-neng-xiang-guan/tiao-zheng-ge-ren-rtp.md)
-* [调整个人fish游戏RTP](gong-neng-xiang-guan/tiao-zheng-ge-ren-rtp-1.md)
+* [调整个人fish游戏RTP（测试中）](gong-neng-xiang-guan/tiao-zheng-ge-ren-rtp-1.md)
 * [调整个人mini游戏RTP](gong-neng-xiang-guan/tiao-zheng-ge-ren-rtp-2.md)
 * [取消个人RTP](gong-neng-xiang-guan/qu-xiao-ge-ren-rtp.md)
 * [查询个人RTP](gong-neng-xiang-guan/cha-xun-ge-ren-rtp.md)
