@@ -38,6 +38,7 @@
 * [调整个人fish游戏RTP（测试中）](gong-neng-xiang-guan/tiao-zheng-ge-ren-rtp-1.md)
 * [调整个人mini游戏RTP（测试中）](gong-neng-xiang-guan/tiao-zheng-ge-ren-rtp-2.md)
 * [取消个人RTP](gong-neng-xiang-guan/qu-xiao-ge-ren-rtp.md)
+* [停用/恢复玩家（测试中）](gong-neng-xiang-guan/qu-xiao-ge-ren-rtp-1.md)
 * [查询个人RTP](gong-neng-xiang-guan/cha-xun-ge-ren-rtp.md)
 * [线路控配置](gong-neng-xiang-guan/xian-lu-kong-pei-zhi.md)
 * [线路控分组](gong-neng-xiang-guan/xian-lu-kong-fen-zu.md)
