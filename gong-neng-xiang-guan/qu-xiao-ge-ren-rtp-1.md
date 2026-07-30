@@ -8,6 +8,8 @@ icon: xmark-large
 
 **停用/恢复玩家**
 
+<mark style="color:red;">**注意**</mark>：此接口有生效延迟，最迟<mark style="color:red;">**一分钟**</mark>后生效。
+
 **1) 请求地址**
 
 > URL: `{APIURL}/api/v2/player/ban`
